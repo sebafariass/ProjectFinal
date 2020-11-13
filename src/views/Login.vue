@@ -1,4 +1,3 @@
-<!-- RAMA DANIELA -->
 <template>
   <div class="w-50 m-auto">
       <b-form-group
@@ -28,7 +27,6 @@
   </div>
 </template>
 
-<!-- ESTOS CAMBIOS TERMINAN EL PROYECTO -->
 
 <script>
   import firebase from 'firebase';
