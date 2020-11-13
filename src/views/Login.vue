@@ -1,3 +1,4 @@
+<!-- prueba -->
 <template>
   <div class="w-50 m-auto">
       <b-form-group
@@ -24,6 +25,11 @@
       </b-form-group>
 
       <b-button type="submit" variant="primary" @click="login">Entrar</b-button>
+
+      <!--Boton GOOGLE-->
+       <b-button @click="logInGoogle" variant="success">
+        Login con Gmail
+      </b-button>
   </div>
 </template>
 
@@ -67,6 +73,19 @@
           console.log();
         });
       },
+
+      //GOOGLE 
+        logInGoogle() {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      firebase
+        .auth()
+        .signInWithPopup(provider)
+        .then((result) => {
+          this.$router.replace("home");
+        
+         })
+    
+    },
     },
   };
 </script>
