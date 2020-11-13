@@ -28,6 +28,8 @@
   </div>
 </template>
 
+<!-- ESTOS CAMBIOS TERMINAN EL PROYECTO -->
+
 <script>
   import firebase from 'firebase';
   import router from '../router/index.js';
