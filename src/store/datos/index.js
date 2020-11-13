@@ -1,79 +1,65 @@
-import firebase from "firebase";
+import Vue from 'vue'
+import Vuex from 'vuex'
+import firebase from 'firebase'
+Vue.use(Vuex)
 
-export default {
-  namespaced: true,
+export default new Vuex.Store({
   state: {
-    Productos: [],
-    add: false,
-  },
-  getters: {
-    datos(state) {
-      return state.Productos;
-    },
+    juguetes : []
   },
   mutations: {
-    setData(state, payload) {
-      state.Productos = payload;
-    },
-    AddData(state, payload) {
-      state.Productos.push(payload);
-    },
-    MostrarAdd(state) {
-      state.add = !state.add;
-    },
+    GET_DATA_JUGUETES(state, juguetes){
+      state.juguetes = juguetes
+    }
   },
-  actions: {
-    getData({ commit }) {
-      firebase.firestore().collection("productos").onSnapshot((snapshot) => {
-          let list_productos = [];
-          snapshot.forEach((p) => {
-            list_productos.push({
-              id: p.id,
-              nombre: p.data().nombre,
-              codigo: p.data().codigo,
-              stock: p.data().stock,
-              precio: p.data().precio,
-            });
+  /*actions: {
+
+    agregarJuguete({commit}, juguete) {
+      firebase
+      .firestore()
+        .collection('juguetes')
+        .add(juguete);
+    },*/
+
+    /*updateJuguete({commit}, juguete) {
+      console.log(juguete);
+      firebase
+      .firestore()
+        .collection('juguetes')
+        .doc(juguete.id)
+        .update(juguete.data);
+    },
+
+    deleteJuguete({commit}, id) {
+      firebase
+      .firestore()
+        .collection('juguetes')
+        .doc(id)
+        .delete(id);
+    },
+
+    getDataJuguetes({commit}) {
+      firebase
+      .firestore()
+        .collection('juguetes')
+        .onSnapshot( (snapshot) => {
+          let juguetes = [];
+          snapshot.forEach((j) => {
+            juguetes.push({ id: j.id, data: j.data() });
           });
-          commit("setData", list_productos);
+          commit('GET_DATA_JUGUETES', juguetes)
         });
+      },
     },
-    async agregando_data({ commit }, payload) {
-      const juguete_unico = {
-        precio: Number(payload.precio),
-        stock: Number(payload.stock),
-        nombre: payload.nombre.toLowerCase(),
-        codigo: payload.codigo.toUpperCase(),
-      };
+  getters: {
+    getJugueteUpdating: (state) => (id) => {
+      return state.juguetes.find(j => j.id === id)
 
-      try {
-          await firebase.firestore().collection("productos").add(juguete_unico);
-          } 
-      catch (error) {
-        console.error("Intentalo nuevamente", error);
-      }
     },
 
-    async eliminando_juguete_accion({ commit }, id) {
-      try {
-      await firebase.firestore().collection("productos").doc(id).delete();
-          } 
-      catch (error) {
-        console.error("Intentalo nuevamente", error);
-      }
-    },
-
-    async editando_juguete__accion({ commit },juguetes ) {
-      console.log(juguetes)
-      try {
-           await firebase.firestore().collection("productos").doc(juguetes.id).update(juguetes.data);
-          }
-       catch (error) {
-        console.error("Error editando juguetes", error);
-      }
-    },
   },
-};
-
+ 
+  modules: {},*/
+});
 
 

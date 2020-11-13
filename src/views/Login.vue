@@ -1,64 +1,72 @@
 <template>
+  <div class="w-50 m-auto">
+      <b-form-group
+        id="input-group-1"
+        label="E-mail:"
+        label-for="input-1"
+      >
+        <b-form-input
+          id="input-1"
+          v-model="email"
+          type="email"
+          required
+          placeholder="Ingrese email"
+        ></b-form-input>
+      </b-form-group>
 
-    <div class="login">
-    <p class="text-center">Inicie sesión mediante su cuenta organizativa</p>
-    <form @submit.prevent="login" class="formulario">
-      <h2 class="px-5" >Ingresa tus datos</h2>
-      <input v-model="usuario" type="text" placeholder="Usuario" />
-      <input v-model="contrasena" type="password" placeholder="Password" />
-      <v-btn class="ma-2" color="success" @click="loader = 'loading'" type="submit">
-      INGRESO
-      </v-btn>
-    </form>
+      <b-form-group id="input-group-2" label="password:" label-for="input-2">
+        <b-form-input
+          id="input-2"
+          v-model="password"
+          required
+          placeholder="Ingrese Contraseña"
+        ></b-form-input>
+      </b-form-group>
+
+      <b-button type="submit" variant="primary" @click="login">Entrar</b-button>
   </div>
-
 </template>
 
 <script>
-import firebase from "firebase";
-
-export default {
-  name: "Login",
-  data() {
-    return {
-  
-      usuario: "",
-      contrasena: "",
-    };
-  },
-
-
-  methods: {
-    login() {
-      firebase
-        .auth()
-        .signInWithEmailAndPassword(this.usuario, this.contrasena)
-        .then(
-          (user) => this.$router.replace("home"),
-          (error) => console.error(error)
-        );
+  import firebase from 'firebase';
+  import router from '../router/index.js';
+  export default {
+    data() {
+      return {
+          email: '',
+          password: '',
+      };
     },
-
-  
-  },
-};
+    methods: {
+      login(){
+        const email = this.email
+        const password = this.password
+        firebase
+        .auth()
+        .signInWithEmailAndPassword(email, password)
+        .then( (resultado) => {
+        this.$bvToast.toast("Bienvenido " + resultado.user.email, {
+          title: `Usuario autenticado`,
+          toaster: 'b-toaster-top-center',
+          solid: true,
+          variant: 'primary',
+          appendToast: true,
+        });
+          console.log(resultado);
+          router.push({name: "Home"})
+        })
+        .catch(e => {
+        this.$bvToast.toast(e.message, {
+          title: `Error`,
+          toaster: 'b-toaster-top-center',
+          solid: true,
+          variant: 'primary',
+          appendToast: true
+        })
+          console.log();
+        });
+      },
+    },
+  };
 </script>
 
-<style lang="scss">
-.formulario {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-
-  .ma-2{
-    margin: 20px;
-  }
-
- 
-}
-
-
-
-
-</style>

@@ -1,11 +1,14 @@
 <template>
-  <v-app>
-    <h1>Inventario de Tienda</h1>
- 
-    <v-main>
-      <router-view />
-    </v-main>
-  </v-app>
+  <div id="app">
+    <div id="nav">
+      <router-link to="/">Login</router-link> |
+      <router-link to="/home">Home</router-link> |
+      <router-link to="/registro">Registro</router-link> |
+      <router-link to="/chat">Chat</router-link> |
+      <router-link to="/recuperar">Recuperación de clave</router-link> |
+    </div>
+    <router-view/>
+  </div>
 </template>
 
 <script>

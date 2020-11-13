@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import firebase from 'firebase'; //importando firebase
 
 
@@ -28,3 +29,9 @@ new Vue({
   vuetify,
   render: h => h(App)
 }).$mount('#app')
+// Install BootstrapVue
+Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
