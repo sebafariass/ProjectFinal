@@ -8,6 +8,7 @@
       <router-link to="/recuperar">Recuperación de clave</router-link> |
     </div>
     <router-view/>
+ 
   </div>
 </template>
 
@@ -25,10 +26,17 @@ export default {
 
   
   methods: {
-    ...mapActions("Datos", ["getData"])
-  },
+    ...mapActions("Datos", ["getData"]),
 
-};
+    
+
+    
+  },
+  
+  
+}
+
+
 </script>
 
 <style lang="scss">
