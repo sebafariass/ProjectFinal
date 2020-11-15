@@ -3,7 +3,7 @@
     <v-container>
       <v-main>
         <!-- consumir datos por el metodo change -->
-<h1>REGISTRA TU MASCOTA!ssss</h1>
+<h1>REGISTRA TU MASCOTA!</h1>
         <v-text-field v-model="nombre" label="Nombre"></v-text-field>
         <v-text-field v-model="edad" label="Edad"></v-text-field>
         <v-file-input
@@ -18,7 +18,11 @@
            
          <div v-show="loading">
         <h3>Registrando Mascotas</h3>
-        <b-progress :value="100" variant="danger" :animated="animate" class="mt-3"></b-progress>
+        <v-progress-linear
+      color="red lighten-2"
+      buffer-value="0"
+      stream
+    ></v-progress-linear>
          </div>
         <v-card v-for="(persona,i) in personas" :key="i" 
                class="mx-auto"
