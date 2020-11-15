@@ -19,9 +19,9 @@
          <div v-show="loading">
         <h3>Registrando Mascotas</h3>
         <v-progress-linear
-      color="red lighten-2"
-      buffer-value="0"
-      stream
+           color="red lighten-2"
+           buffer-value="0"
+           stream
     ></v-progress-linear>
          </div>
         <v-card v-for="(persona,i) in personas" :key="i" 

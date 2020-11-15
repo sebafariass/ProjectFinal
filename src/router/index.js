@@ -24,6 +24,17 @@ const routes = [
         import(/* webpackChunkName: "login" */ "../views/Login.vue"),
        
     },
+
+    //RUTA NUEVA UNA VEZ ENTRANDO LA PARTE LOGIN 
+    {
+      path: "/chat",
+      name: "Chat",
+      component: () =>
+        import( "../views/Chat.vue"),
+        meta: {
+          login: true,
+        },
+    },
   ];
 
   const router = new VueRouter({
