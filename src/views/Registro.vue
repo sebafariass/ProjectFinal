@@ -1,6 +1,6 @@
 <template>
-  <div>
     <div>
+          <div>
       <b-navbar toggleable type="dark" variant="dark">
         <b-navbar-brand href="#">L O G O</b-navbar-brand>
 
@@ -23,15 +23,5 @@
         </b-collapse>
       </b-navbar>
     </div>
-  </div>
+    </div>
 </template>
-
-<script>
-export default {
-
-}
-</script>
-
-<style>
-
-</style>

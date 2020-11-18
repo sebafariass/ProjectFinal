@@ -1,11 +1,30 @@
-<!-- prueba -->
 <template>
-  <div class="w-50 m-auto">
-      <b-form-group
-        id="input-group-1"
-        label="E-mail:"
-        label-for="input-1"
-      >
+  <div>
+    <div>
+      <b-navbar toggleable type="dark" variant="dark">
+        <b-navbar-brand href="#">A N I M A L</b-navbar-brand>
+
+        <b-navbar-toggle target="navbar-toggle-collapse">
+          <template #default="{ expanded }">
+            <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
+            <b-icon v-else icon="chevron-bar-down"></b-icon>
+          </template>
+        </b-navbar-toggle>
+
+        <b-collapse id="navbar-toggle-collapse" is-nav>
+          <b-navbar-nav class="ml-auto">
+            <b-nav-item href="#">Login</b-nav-item>
+            <b-nav-item href="#">Home</b-nav-item>
+            <b-nav-item href="#">Registro</b-nav-item>
+            <b-nav-item href="#">Chat</b-nav-item>
+            <b-nav-item href="#">Recuperación de clave</b-nav-item>
+          </b-navbar-nav>
+        </b-collapse>
+      </b-navbar>
+    </div>
+
+    <div class="w-50 m-auto">
+      <b-form-group id="input-group-1" label="E-mail:" label-for="input-1">
         <b-form-input
           id="input-1"
           v-model="email"
@@ -27,66 +46,63 @@
       <b-button type="submit" variant="primary" @click="login">Entrar</b-button>
 
       <!--Boton GOOGLE-->
-       <b-button @click="logInGoogle" variant="success">
+      <b-button @click="logInGoogle" variant="success">
         Login con Gmail
       </b-button>
+    </div>
   </div>
 </template>
 
-
 <script>
-  import firebase from 'firebase';
-  import router from '../router/index.js';
-  export default {
-    data() {
-      return {
-          email: '',
-          password: '',
-      };
-    },
-    methods: {
-      login(){
-        const email = this.email
-        const password = this.password
-        firebase
+import firebase from "firebase";
+import router from "../router/index.js";
+export default {
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    login() {
+      const email = this.email;
+      const password = this.password;
+      firebase
         .auth()
         .signInWithEmailAndPassword(email, password)
-        .then( (resultado) => {
-        this.$bvToast.toast("Bienvenido " + resultado.user.email, {
-          title: `Usuario autenticado`,
-          toaster: 'b-toaster-top-center',
-          solid: true,
-          variant: 'primary',
-          appendToast: true,
-        });
+        .then((resultado) => {
+          this.$bvToast.toast("Bienvenido " + resultado.user.email, {
+            title: `Usuario autenticado`,
+            toaster: "b-toaster-top-center",
+            solid: true,
+            variant: "primary",
+            appendToast: true,
+          });
           console.log(resultado);
-          router.push({name: "Home"})
+          router.push({ name: "Home" });
         })
-        .catch(e => {
-        this.$bvToast.toast(e.message, {
-          title: `Error`,
-          toaster: 'b-toaster-top-center',
-          solid: true,
-          variant: 'primary',
-          appendToast: true
-        })
+        .catch((e) => {
+          this.$bvToast.toast(e.message, {
+            title: `Error`,
+            toaster: "b-toaster-top-center",
+            solid: true,
+            variant: "primary",
+            appendToast: true,
+          });
           console.log();
         });
-      },
+    },
 
-      //GOOGLE 
-        logInGoogle() {
+    //GOOGLE
+    logInGoogle() {
       const provider = new firebase.auth.GoogleAuthProvider();
       firebase
         .auth()
         .signInWithPopup(provider)
         .then((result) => {
           this.$router.replace("home");
-        
-         })
-    
+        });
     },
-    },
-  };
+  },
+};
 </script>
-
