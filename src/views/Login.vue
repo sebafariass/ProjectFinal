@@ -1,28 +1,5 @@
 <template>
   <div>
-    <div>
-      <b-navbar toggleable type="dark" variant="dark">
-        <b-navbar-brand href="#">A N I M A L</b-navbar-brand>
-
-        <b-navbar-toggle target="navbar-toggle-collapse">
-          <template #default="{ expanded }">
-            <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
-            <b-icon v-else icon="chevron-bar-down"></b-icon>
-          </template>
-        </b-navbar-toggle>
-
-        <b-collapse id="navbar-toggle-collapse" is-nav>
-          <b-navbar-nav class="ml-auto">
-            <b-nav-item href="#">Login</b-nav-item>
-            <b-nav-item href="#">Home</b-nav-item>
-            <b-nav-item href="#">Registro</b-nav-item>
-            <b-nav-item href="#">Chat</b-nav-item>
-            <b-nav-item href="#">Recuperación de clave</b-nav-item>
-          </b-navbar-nav>
-        </b-collapse>
-      </b-navbar>
-    </div>
-
     <div class="w-50 m-auto">
       <b-form-group id="input-group-1" label="E-mail:" label-for="input-1">
         <b-form-input
@@ -49,6 +26,8 @@
       <b-button @click="logInGoogle" variant="success">
         Login con Gmail
       </b-button>
+
+       
     </div>
   </div>
 </template>
@@ -101,6 +80,17 @@ export default {
         .signInWithPopup(provider)
         .then((result) => {
           this.$router.replace("home");
+        });
+    },
+       logOut() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          this.$router.push("/");
+        })
+        .catch((e) => {
+          console.error("Sign Out Error", e);
         });
     },
   },
