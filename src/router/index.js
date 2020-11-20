@@ -21,16 +21,32 @@ const routes = [
       path: "/login",
       name: "Login",
       component: () =>
-        import(/* webpackChunkName: "login" */ "../views/Login.vue"),
+        import( "../views/Login.vue"),
        
     },
-
-    //RUTA NUEVA UNA VEZ ENTRANDO LA PARTE LOGIN 
+    {
+      path: "/registro",
+      name: "Registro",
+      component: () =>
+        import( "../views/Registro.vue"),
+        meta: {
+          login: true,
+        },
+    },
     {
       path: "/chat",
       name: "Chat",
       component: () =>
-        import( "../views/Chat.vue"),
+        import("../views/Chat.vue"),
+        meta: {
+          login: true,
+        },
+    },
+    {
+      path: "/recuperar",
+      name: "Recuperar",
+      component: () =>
+        import("../views/Recuperar.vue"),
         meta: {
           login: true,
         },

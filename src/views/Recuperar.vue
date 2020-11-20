@@ -1,5 +1,5 @@
 <template>
-  <h1>HOME PROBANDO</h1>
+  <div><h1>ESTO ES RECUPERACION PASSWORD</h1></div>
 </template>
 
 <script>
