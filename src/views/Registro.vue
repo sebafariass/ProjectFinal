@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div>
     <v-container>
       <v-main>
@@ -114,3 +115,31 @@ export default {
 
 <style>
 </style>
+=======
+    <div>
+          <div>
+      <b-navbar toggleable type="dark" variant="dark">
+        <b-navbar-brand href="#">L O G O</b-navbar-brand>
+
+        <b-navbar-toggle target="navbar-toggle-collapse">
+          <template #default="{ expanded }">
+            <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
+            <b-icon v-else icon="chevron-bar-down"></b-icon>
+          </template>
+        </b-navbar-toggle>
+
+        <b-collapse id="navbar-toggle-collapse" is-nav>
+          <b-navbar-nav class="ml-auto">
+            <b-nav-item href="#">Login</b-nav-item>
+            <b-nav-item href="#">Home</b-nav-item>
+            <b-nav-item href="#">Registro</b-nav-item>
+            <b-nav-item href="#">Chat</b-nav-item>
+            <b-nav-item href="#">Recuperación de clave</b-nav-item>
+            
+          </b-navbar-nav>
+        </b-collapse>
+      </b-navbar>
+    </div>
+    </div>
+</template>
+>>>>>>> 7ba3be825d1539a9c70590fb87ffb229b5125e25

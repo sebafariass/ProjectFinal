@@ -51,6 +51,15 @@ const routes = [
           login: true,
         },
     },
+    {
+      path: "/recuperacion",
+      name: "Recuperacion",
+      component: () =>
+        import( "../views/Chat.vue"),
+        meta: {
+          login: true,
+        },
+    },
   ];
 
   const router = new VueRouter({
