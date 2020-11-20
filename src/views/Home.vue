@@ -1,7 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <h1>HOME PROBANDO</h1>
-=======
   <div>
     <div>
       <b-navbar toggleable type="dark" variant="dark">
@@ -70,20 +67,10 @@
       </v-container>
     </div>
   </div>
->>>>>>> 7ba3be825d1539a9c70590fb87ffb229b5125e25
 </template>
 
 <script>
 export default {
-<<<<<<< HEAD
-
-}
-</script>
-
-<style>
-
-</style>
-=======
   mounted() {
     firebase
       .firestore()
@@ -144,4 +131,3 @@ export default {
 </script>
 
 <style></style>
->>>>>>> 7ba3be825d1539a9c70590fb87ffb229b5125e25
