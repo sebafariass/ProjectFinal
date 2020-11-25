@@ -48,7 +48,7 @@ export default {
       const password = this.password;
       firebase
         .auth()
-        .signInWithEmailAndPassword(email, password)
+        .signInWithEmailAndPassword(this.email, this.password)
         .then((resultado) => {
           this.$bvToast.toast("Bienvenido " + resultado.user.email, {
             title: `Usuario autenticado`,

@@ -1,6 +1,5 @@
 <template>
-   <div>
-    <div>
+  <div>
       <b-navbar toggleable type="dark" variant="dark">
         <b-navbar-brand href="#">A N I M A L</b-navbar-brand>
 
@@ -23,11 +22,10 @@
         </b-collapse>
       </b-navbar>
     </div>
-   </div>
 </template>
 
 <script>
-import firebase from "firebase"
+
 export default {
   name: "Navbar",
 

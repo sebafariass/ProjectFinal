@@ -2,9 +2,23 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+//vuetify ADD 
 import vuetify from './plugins/vuetify';
+
+//importando bootstrapVue
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-import firebase from 'firebase'; //importando firebase
+Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+//importando firebase
+import firebase from 'firebase'; 
+
+//import vueChatScroll
+import VueChatScroll from 'vue-chat-scroll'
+Vue.use(VueChatScroll)
 
 
 Vue.config.productionTip = false
@@ -29,9 +43,3 @@ new Vue({
   vuetify,
   render: h => h(App)
 }).$mount('#app')
-// Install BootstrapVue
-Vue.use(BootstrapVue)
-// Optionally install the BootstrapVue icon components plugin
-Vue.use(IconsPlugin)
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
