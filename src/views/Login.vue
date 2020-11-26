@@ -36,6 +36,7 @@
 import firebase from "firebase";
 import router from "../router/index.js";
 export default {
+  name: "Login",
   data() {
     return {
       email: "",

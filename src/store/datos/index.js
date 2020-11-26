@@ -6,23 +6,23 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   
   state: {
-    juguetes : []
+    razas : []
   },
   mutations: {
-    GET_DATA_JUGUETES(state, juguetes){
-      state.juguetes = juguetes
+    GET_DATA_RAZAS(state, razas){
+      state.razas = razas
     }
   },
-  /*actions: {
-
+  actions: {
+/*
     agregarJuguete({commit}, juguete) {
       firebase
       .firestore()
         .collection('juguetes')
         .add(juguete);
-    },*/
+    },
 
-    /*updateJuguete({commit}, juguete) {
+    updateJuguete({commit}, juguete) {
       console.log(juguete);
       firebase
       .firestore()
@@ -37,30 +37,29 @@ export default new Vuex.Store({
         .collection('juguetes')
         .doc(id)
         .delete(id);
-    },
+    }, */
 
-    getDataJuguetes({commit}) {
+    getDataRazas({commit}) {
       firebase
       .firestore()
-        .collection('juguetes')
+        .collection('razas')
         .onSnapshot( (snapshot) => {
-          let juguetes = [];
-          snapshot.forEach((j) => {
-            juguetes.push({ id: j.id, data: j.data() });
+          let razas = [];
+          snapshot.forEach((r) => {
+            razas.push({ id: r.id, data: r.data() });
           });
-          commit('GET_DATA_JUGUETES', juguetes)
+          commit('GET_DATA_RAZAS', razas)
         });
       },
     },
-  getters: {
+    getters: {
     getJugueteUpdating: (state) => (id) => {
-      return state.juguetes.find(j => j.id === id)
-
-    },
+      return state.razas.find(r => r.id === id)
+    }
 
   },
  
-  modules: {},*/
+  modules: {},
 });
 
 
