@@ -20,11 +20,11 @@ export default {
     Footer
   },
   created() {
-    this.getData();
+  this.getDataRazas();
   },
 
   methods: {
-    ...mapActions("Datos", ["getData"]),
+    ...mapActions(["getDataRazas"]),
   },
 };
 </script>

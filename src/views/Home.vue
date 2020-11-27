@@ -1,7 +1,7 @@
 <template>
   <div>
     <tr v-for="(raza,i) in razas" :key="i">
-          <td>{{raza.data.nombre}}</td>
+          <h2 class="text-center">{{raza.data.nombre}}</h2>
     </tr>
   </div>
 </template>
@@ -21,7 +21,7 @@ import {mapState, mapGetters, mapActions} from "vuex";
     },
       computed: {
     ...mapState(['razas']),
-    ...mapGetters(['getJugueteUpdating'])
+   
   },
   }
 </script>

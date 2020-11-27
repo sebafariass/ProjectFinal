@@ -3,7 +3,7 @@
     <div>
       <v-container>
         <v-main>
-          
+             <button @click="logout" class="btnLogout">Logout</button>
           <!-- consumir datos por el metodo change -->
        
           <h1>REGISTRA TU MASCOTA!</h1>
@@ -72,6 +72,13 @@ export default {
       this.imagen = file;
       //mandando info a firebase storage
     },
+     logout() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => this.$router.replace("home"));
+    },
+
     upload() {
       (this.loading = true),
         firebase
@@ -110,3 +117,15 @@ export default {
   }),
 };
 </script>
+
+
+<style>
+.btnLogout {
+  color: #ffffff;
+  background-color: #d84141;
+  border-style: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 50px;
+}
+</style>
