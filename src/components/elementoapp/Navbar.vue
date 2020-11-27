@@ -15,7 +15,7 @@
             <b-nav-item to="/login">Login</b-nav-item>
             <b-nav-item to="/home">Home</b-nav-item>
             <b-nav-item to="/registro">Registro</b-nav-item>
-            <b-nav-item to="/chat">Chat</b-nav-item>
+            <b-nav-item to="/muestra">MatchCan</b-nav-item>
             <b-nav-item to="/recuperar">Recuperar clave</b-nav-item>
           
           </b-navbar-nav>

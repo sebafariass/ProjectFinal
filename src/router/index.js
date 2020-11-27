@@ -33,10 +33,10 @@ const routes = [
         },
     },
     {
-      path: "/chat",
-      name: "Chat",
+      path: "/muestra",
+      name: "Muestra",
       component: () =>
-        import("../views/Chat.vue"),
+        import("../views/Muestra.vue"),
         meta: {
           login: true,
         },

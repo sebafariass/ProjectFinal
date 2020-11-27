@@ -8,9 +8,11 @@
        
           <h1>REGISTRA TU MASCOTA!</h1>
           <v-text-field v-model="nombre" label="Nombre"></v-text-field>
+           <v-text-field v-model="animal" label="Tipo de animal"></v-text-field>
           <v-text-field v-model="edad" label="Edad"></v-text-field>
           <v-text-field v-model="raza" label="Raza"></v-text-field>
           <v-text-field v-model="sexo" label="Sexo"></v-text-field>
+          <v-text-field v-model="text" label="Información Extra"></v-text-field>
           <v-file-input
             @change="previewImage"
             accept="image/*"
@@ -34,7 +36,7 @@
           class="mx-auto"
           max-width="344"
         >
-          <v-img :src="persona.data.imgSrc" height="200px"> </v-img>
+          <v-img  :src="persona.data.imgSrc" height="200px"> </v-img>
 
           <v-card-title>
             {{ persona.data.name }}
@@ -98,7 +100,11 @@ export default {
                 .add({
                   name: this.nombre,
                   edad: this.edad,
+                  race: this.raza,
+                  sex: this.sexo,
+                  especie: this.animal,
                   imgSrc: this.url,
+                  info: this.text
                 })
                 .then(() => {
                   this.loading = false;
@@ -106,12 +112,18 @@ export default {
             });
           });
     },
+
+    
   },
   data: () => ({
     imagen: "",
     url: "",
     nombre: "",
     edad: "",
+    raza: "",
+    sexo: "",
+    text: "",
+    animal: "",
     personas: [],
     loading: false,
   }),
@@ -122,7 +134,7 @@ export default {
 <style>
 .btnLogout {
   color: #ffffff;
-  background-color: #d84141;
+  background-color: rgb(3, 170, 148);
   border-style: none;
   border-radius: 5px;
   padding: 10px 20px;

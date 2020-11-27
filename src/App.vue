@@ -21,11 +21,12 @@ export default {
   },
   created() {
     this.getDataRazas(),
-    this.getDataEdades()
+    this.getDataEdades(),
+    this.getDataPersonas()
   },
 
   methods: {
-    ...mapActions(["getDataRazas","getDataEdades"]),
+    ...mapActions(["getDataRazas","getDataEdades", "getDataPersonas"]),
   },
 };
 </script>
