@@ -20,11 +20,12 @@ export default {
     Footer
   },
   created() {
-  this.getDataRazas();
+    this.getDataRazas(),
+    this.getDataEdades()
   },
 
   methods: {
-    ...mapActions(["getDataRazas"]),
+    ...mapActions(["getDataRazas","getDataEdades"]),
   },
 };
 </script>
