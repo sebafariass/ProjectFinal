@@ -22,11 +22,14 @@
           <v-card-text class="pb-2">
             <div>
               <h5>Datos Mascota</h5>
+             
               <div><b>Nombre:</b> {{ personaje.data.name }}</div>
-              <div><b>Sexo:</b> {{ personaje.data.sex }}</div>
               <div><b>Edad:</b> {{ personaje.data.edad }}</div>
               <div><b>Raza:</b> {{ personaje.data.race }}</div>
-              <div><b>Info:</b> {{ personaje.data.info }}</div>
+              <div><b>Sexo:</b> {{ personaje.data.sex }}</div>
+              <div><b>Especie:</b> {{ personaje.data.especie }}</div>
+             <div><b>Ciudad:</b> {{ personaje.data.city }}</div>
+             <div><b>Info:</b> {{ personaje.data.info }}</div>
             </div>
           </v-card-text>
 

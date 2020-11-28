@@ -12,6 +12,7 @@
           <v-text-field v-model="edad" label="Edad"></v-text-field>
           <v-text-field v-model="raza" label="Raza"></v-text-field>
           <v-text-field v-model="sexo" label="Sexo"></v-text-field>
+          <v-text-field v-model="ciudad" label="Ciudad"></v-text-field>
           <v-text-field v-model="text" label="Información Extra"></v-text-field>
           <v-file-input
             @change="previewImage"
@@ -104,7 +105,8 @@ export default {
                   sex: this.sexo,
                   especie: this.animal,
                   imgSrc: this.url,
-                  info: this.text
+                  info: this.text,
+                  city: this.ciudad
                 })
                 .then(() => {
                   this.loading = false;
@@ -124,6 +126,7 @@ export default {
     sexo: "",
     text: "",
     animal: "",
+    ciudad: "",
     personas: [],
     loading: false,
   }),
