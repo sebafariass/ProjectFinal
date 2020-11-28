@@ -12,12 +12,6 @@
       <b-form-select-option v-model="selected" :value="null">Selecciona una edad</b-form-select-option>
       <b-form-select-option v-for="(edad,j) in edades" :key="j" :value="null">{{edad.data.rango}}</b-form-select-option>
     </b-form-select>
-
-    
-    <!--
-    <tr v-for="(raza,i) in razas" :key="i">
-          <h2 class="text-center">{{raza.data.nombre}}</h2>
-    </tr--> 
   </div>
 </template>
 
@@ -44,4 +38,5 @@ import {mapState, mapGetters, mapActions} from "vuex";
     ...mapState(['razas','edades']),
   },
   }
+  
 </script>
