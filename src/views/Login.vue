@@ -36,6 +36,7 @@
 import firebase from "firebase";
 import router from "../router/index.js";
 export default {
+  name: "Login",
   data() {
     return {
       email: "",
@@ -48,7 +49,7 @@ export default {
       const password = this.password;
       firebase
         .auth()
-        .signInWithEmailAndPassword(email, password)
+        .signInWithEmailAndPassword(this.email, this.password)
         .then((resultado) => {
           this.$bvToast.toast("Bienvenido " + resultado.user.email, {
             title: `Usuario autenticado`,

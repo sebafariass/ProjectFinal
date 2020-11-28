@@ -1,30 +1,32 @@
 
 <template>
   <div id="app">
-    <div id="nav">
       <Navbar /> 
-    
-    </div>
     <router-view />
+     <Footer />
   </div>
 </template>
 
 <script>
-import Navbar from "./components/Navbar";
-import { mapActions } from "vuex";
+import Footer from "@/components/elementoapp/Footer.vue";
+import Navbar from "@/components/elementoapp/Navbar.vue";
 import firebase from "firebase";
+import { mapActions } from "vuex";
 
 export default {
   name: "App",
   components: {
     Navbar,
+    Footer
   },
   created() {
-    this.getData();
+    this.getDataRazas(),
+    this.getDataEdades(),
+    this.getDataPersonas()
   },
 
   methods: {
-    ...mapActions("Datos", ["getData"]),
+    ...mapActions(["getDataRazas","getDataEdades", "getDataPersonas"]),
   },
 };
 </script>

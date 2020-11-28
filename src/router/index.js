@@ -22,7 +22,6 @@ const routes = [
       name: "Login",
       component: () =>
         import( "../views/Login.vue"),
-       
     },
     {
       path: "/registro",
@@ -34,10 +33,10 @@ const routes = [
         },
     },
     {
-      path: "/chat",
-      name: "Chat",
+      path: "/muestra",
+      name: "Muestra",
       component: () =>
-        import("../views/Chat.vue"),
+        import("../views/Muestra.vue"),
         meta: {
           login: true,
         },
@@ -47,15 +46,6 @@ const routes = [
       name: "Recuperar",
       component: () =>
         import("../views/Recuperar.vue"),
-        meta: {
-          login: true,
-        },
-    },
-    {
-      path: "/recuperacion",
-      name: "Recuperacion",
-      component: () =>
-        import( "../views/Recuperacion.vue"),
         meta: {
           login: true,
         },

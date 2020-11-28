@@ -1,8 +1,7 @@
 <template>
-   <div>
-    <div>
+  <div>
       <b-navbar toggleable type="dark" variant="dark">
-        <b-navbar-brand href="#">A N I M A L</b-navbar-brand>
+        <b-navbar-brand href="#">L O G O + MatchCan, CanInder, CitaDog, datingDog</b-navbar-brand>
 
         <b-navbar-toggle target="navbar-toggle-collapse">
           <template #default="{ expanded }">
@@ -16,18 +15,17 @@
             <b-nav-item to="/login">Login</b-nav-item>
             <b-nav-item to="/home">Home</b-nav-item>
             <b-nav-item to="/registro">Registro</b-nav-item>
-            <b-nav-item to="/chat">Chat</b-nav-item>
-            <b-nav-item to="/recuperacion">Recuperación de clave</b-nav-item>
+            <b-nav-item to="/muestra">MatchCan</b-nav-item>
+            <b-nav-item to="/recuperar">Recuperar clave</b-nav-item>
           
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
     </div>
-   </div>
 </template>
 
 <script>
-import firebase from "firebase"
+
 export default {
   name: "Navbar",
 
@@ -36,6 +34,8 @@ export default {
 
 </script>
 
-<style>
-
+<style lang="css">
+  .bg-dark {
+    background-color: indigo !important;
+  }
 </style>
