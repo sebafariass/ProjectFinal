@@ -1,10 +1,15 @@
 
 <template>
-  <div id="app">
-      <Navbar /> 
-    <router-view />
-     <Footer />
-  </div>
+    <v-app>
+    <Navbar />
+
+    <v-main>
+      <transition name="fade" mode="out-in">
+        <router-view />
+      </transition>
+    </v-main>
+    <Footer />
+  </v-app>
 </template>
 
 <script>
@@ -34,5 +39,14 @@ export default {
 <style lang="scss">
 h1 {
   text-align: center;
+}
+
+.barraColorFooter {
+  background: #ff0000;
+  background: linear-gradient(122deg, #ff0000 0%, #7100ff 80%);
+  background: -webkit-linear-gradient(122deg, #ff0000 0%, #7100ff 80%);
+  background: -moz-linear-gradient(122deg, #ff0000 0%, #7100ff 80%);
+  height: 200px;
+  width: 100%;
 }
 </style>

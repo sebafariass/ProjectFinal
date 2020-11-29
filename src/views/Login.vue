@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="w-50 m-auto">
+    <div class="w-50  m-auto mt-5" >
       <b-form-group id="input-group-1" label="E-mail:" label-for="input-1">
         <b-form-input
           id="input-1"
@@ -97,3 +97,4 @@ export default {
   },
 };
 </script>
+

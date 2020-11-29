@@ -8,9 +8,8 @@
        
           <h1>REGISTRA TU MASCOTA!</h1>
           <v-text-field v-model="nombre" label="Nombre"></v-text-field>
-           <v-text-field v-model="animal" label="Tipo de animal"></v-text-field>
           <v-text-field v-model="edad" label="Edad"></v-text-field>
-          <v-text-field v-model="raza" label="Raza"></v-text-field>
+           <v-text-field v-model="raza" label="Raza"></v-text-field>
           <v-text-field v-model="sexo" label="Sexo"></v-text-field>
           <v-text-field v-model="ciudad" label="Ciudad"></v-text-field>
           <v-text-field v-model="text" label="Información Extra"></v-text-field>
@@ -54,7 +53,17 @@
 
 <script>
 import firebase from "firebase"
+import {mapState, mapGetters, mapActions} from "vuex";
 export default {
+    data() {
+      return {
+     
+      }  
+    },
+  computed: {
+    ...mapState(['razas']),
+    ...mapState(['edades'])
+  },
   mounted() {
     firebase
       .firestore()
@@ -103,7 +112,6 @@ export default {
                   edad: this.edad,
                   race: this.raza,
                   sex: this.sexo,
-                  especie: this.animal,
                   imgSrc: this.url,
                   info: this.text,
                   city: this.ciudad
@@ -125,7 +133,6 @@ export default {
     raza: "",
     sexo: "",
     text: "",
-    animal: "",
     ciudad: "",
     personas: [],
     loading: false,
