@@ -8,6 +8,7 @@
        
           <h1>REGISTRA TU MASCOTA!</h1>
           <v-text-field v-model="nombre" label="Nombre"></v-text-field>
+<<<<<<< HEAD
           <b-form-select >
           <b-form-select-option v-model="selected" :value="null">Selecciona una raza</b-form-select-option>
           <b-form-select-option v-for="(raza,i) in razas" :key="i" :value="null">{{raza.data.nombre}}</b-form-select-option>
@@ -17,6 +18,10 @@
           <b-form-select-option v-model="selected" :value="null">Selecciona una edad</b-form-select-option>
           <b-form-select-option v-for="(edad,j) in edades" :key="j" :value="null">{{edad.data.rango}}</b-form-select-option>
           </b-form-select>
+=======
+          <v-text-field v-model="edad" label="Edad"></v-text-field>
+           <v-text-field v-model="raza" label="Raza"></v-text-field>
+>>>>>>> 381811336b6be2ca201b0bf1f90c5c513a76e28f
           <v-text-field v-model="sexo" label="Sexo"></v-text-field>
           <v-text-field v-model="ciudad" label="Ciudad"></v-text-field>
           <v-text-field v-model="text" label="Información Extra"></v-text-field>
@@ -64,6 +69,7 @@ import {mapState, mapGetters, mapActions} from "vuex";
 export default {
     data() {
       return {
+<<<<<<< HEAD
         rango: "",
         nombre: "",
         raza: {
@@ -80,6 +86,14 @@ export default {
     },
   computed: {
     ...mapState(['razas','edades']),
+=======
+     
+      }  
+    },
+  computed: {
+    ...mapState(['razas']),
+    ...mapState(['edades'])
+>>>>>>> 381811336b6be2ca201b0bf1f90c5c513a76e28f
   },
   mounted() {
     firebase
@@ -129,7 +143,6 @@ export default {
                   edad: this.edad,
                   race: this.raza,
                   sex: this.sexo,
-                  especie: this.animal,
                   imgSrc: this.url,
                   info: this.text,
                   city: this.ciudad
@@ -151,7 +164,6 @@ export default {
     raza: "",
     sexo: "",
     text: "",
-    animal: "",
     ciudad: "",
     personas: [],
     loading: false,

@@ -23,6 +23,24 @@ export default new Vuex.Store({
   },
   actions: {
 
+    agregando_user({ commit }, usuario) {
+      try {
+        firebase
+          .auth()
+          .createUserWithEmailAndPassword(usuario.email, usuario.password)
+          .then(() => {
+            const user = usuario;
+            delete user.password;
+            firebase
+              .firestore()
+              .collection("agregaruser")
+              .add(usuario);
+          });
+      } catch (error) {
+        console.log("Tienes un error en Usuario: ", error);
+      }
+    },
+
     async getDataRazas({ commit }) {
       try {
         await firebase
