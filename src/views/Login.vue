@@ -19,19 +19,22 @@
           placeholder="Ingrese Contraseña"
         ></b-form-input>
       </b-form-group>
-
-      <b-button type="submit" variant="primary" @click="login">Iniciar sesión</b-button>
+      <div>
+      <b-button class="btn" type="submit" variant="primary" @click="login">Iniciar sesión</b-button>
+      <br>
 
       <!--Boton GOOGLE-->
-      <b-button @click="logInGoogle" variant="success">
+      <b-button class="btn" @click="logInGoogle" variant="success">
         Continuar con Gmail
+        
       </b-button>
+      <br>
       <!--Boton para registro -->
-      <b-button @click="Registro" variant="success">
+      <b-button class="btn" @click="Registro" variant="success">
         Regístrate
       </b-button>
 
-
+    </div>
        
     </div>
   </div>
@@ -102,3 +105,8 @@ export default {
   },
 };
 </script>
+<style lang="css">
+.btn {
+  margin: 20px;
+}
+</style>
