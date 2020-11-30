@@ -17,7 +17,7 @@
             <b-nav-item to="/registro">Registro</b-nav-item>
             <b-nav-item to="/muestra">MatchCan</b-nav-item>
             <b-nav-item to="/recuperar">Recuperar clave</b-nav-item>
-            <b-nav-item to="Login">Logout</b-nav-item>
+            <b-nav-item @click="logout">Logout</b-nav-item>
           
           </b-navbar-nav>
         </b-collapse>
@@ -26,15 +26,17 @@
 </template>
 
 <script>
-
+import firebase from "firebase"
+import {mapState, mapGetters, mapActions} from "vuex";
 export default {
+  
   name: "Navbar",
   methods: {
   logout() {
       firebase
         .auth()
         .signOut()
-        .then(() => this.$router.replace("home"));
+        .then(() => window.location= '/login');
   },
   }
 }
