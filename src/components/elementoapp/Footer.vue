@@ -7,7 +7,7 @@
         <strong>Todos los derechos reservados</strong>
 
         <v-spacer></v-spacer>
-
+ 
         <v-btn
           v-for="(icon,i) in icons"
           :key="i"
