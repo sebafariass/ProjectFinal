@@ -1,7 +1,10 @@
 <template>
   <div>
       <b-navbar toggleable type="dark" variant="dark">
-        <b-navbar-brand href="#">L O G O + MatchCan, CanInder, CitaDog, datingDog</b-navbar-brand>
+        <b-navbar-brand href="#">
+          <img src="../../assets/logo-transparente.png" width="120" height="120" alt="">
+          DatingDog
+        </b-navbar-brand>
 
         <b-navbar-toggle target="navbar-toggle-collapse">
           <template #default="{ expanded }">
@@ -41,7 +44,4 @@ export default {
 </script>
 
 <style lang="css">
-  .bg-dark {
-    background-color: indigo !important;
-  }
 </style>

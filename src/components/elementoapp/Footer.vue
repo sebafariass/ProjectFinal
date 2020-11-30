@@ -2,7 +2,9 @@
   <v-footer dark padless>
     <v-card class="flex" flat tile>
       <v-card-title class="teal">
-        <strong class="subheading"> L O G O + n o m b r e</strong>
+        <strong class="subheading"></strong>
+        {{ new Date().getFullYear() }} —
+        <strong>Todos los derechos reservados</strong>
 
         <v-spacer></v-spacer>
 
@@ -18,11 +20,6 @@
           </v-icon>
         </v-btn>
       </v-card-title>
-
-      <v-card-text class="py-2 white--text text-center">
-        {{ new Date().getFullYear() }} —
-        <strong>Todos los derechos reservados</strong>
-      </v-card-text>
     </v-card>
   </v-footer>
 </template>

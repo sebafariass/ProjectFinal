@@ -3,10 +3,9 @@
     <div>
       <v-container>
         <v-main>
-             <button @click="logout" class="btnLogout">Logout</button>
           <!-- consumir datos por el metodo change -->
        
-          <h1>REGISTRA TU MASCOTA!</h1>
+          <h1>Registra a tu mascota con nosotros</h1>
           <v-text-field v-model="nombre" label="Nombre"></v-text-field>
           <b-form-select >
           <b-form-select-option v-model="selected" :value="null">Selecciona una raza</b-form-select-option>
@@ -161,12 +160,7 @@ export default {
 
 
 <style>
-.btnLogout {
-  color: #ffffff;
-  background-color: rgb(3, 170, 148);
-  border-style: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin-top: 50px;
+.custom-select {
+  margin: 20px;
 }
 </style>
