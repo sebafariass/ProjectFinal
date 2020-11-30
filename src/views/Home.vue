@@ -1,7 +1,10 @@
+
+
+
 <template>
 <b-container class="bv-example-row">
   <div>
-    <h2>Hola! (nombre del perro)</h2>
+     <h2>Hola! (nombre del perro)</h2>
     <h5>Mostrar fotos del perro que están en la base de datos subidas por los dueños en el login</h5>
     <h2>¿Qué buscas?</h2>
     <b-form-select class="my-5">
@@ -21,6 +24,7 @@
 import {mapState, mapGetters, mapActions} from "vuex";
   export default {
     data() {
+      selected : "null"
       return {
         rango: "",
         nombre: "",

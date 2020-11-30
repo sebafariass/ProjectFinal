@@ -7,15 +7,8 @@
        
           <h1>Registra a tu mascota con nosotros</h1>
           <v-text-field v-model="nombre" label="Nombre"></v-text-field>
-          <b-form-select >
-          <b-form-select-option v-model="selected" :value="null">Selecciona una raza</b-form-select-option>
-          <b-form-select-option v-for="(raza,i) in razas" :key="i" :value="null">{{raza.data.nombre}}</b-form-select-option>
-          </b-form-select>
-    
-          <b-form-select >
-          <b-form-select-option v-model="selected" :value="null">Selecciona una edad</b-form-select-option>
-          <b-form-select-option v-for="(edad,j) in edades" :key="j" :value="null">{{edad.data.rango}}</b-form-select-option>
-          </b-form-select>
+          <v-text-field v-model="edad" label="Edad"></v-text-field>
+           <v-text-field v-model="raza" label="Raza"></v-text-field>
           <v-text-field v-model="sexo" label="Sexo"></v-text-field>
           <v-text-field v-model="ciudad" label="Ciudad"></v-text-field>
           <v-text-field v-model="text" label="Información Extra"></v-text-field>
@@ -63,22 +56,12 @@ import {mapState, mapGetters, mapActions} from "vuex";
 export default {
     data() {
       return {
-        rango: "",
-        nombre: "",
-        raza: {
-          data: {
-            nombre: "",
-          }
-        },
-        edad: {
-          data: {
-            rango: ""
-          }
-        }
+     
       }  
     },
   computed: {
-    ...mapState(['razas','edades']),
+    ...mapState(['razas']),
+    ...mapState(['edades'])
   },
   mounted() {
     firebase
@@ -106,7 +89,6 @@ export default {
         .signOut()
         .then(() => this.$router.replace("home"));
     },
-
     upload() {
       (this.loading = true),
         firebase
@@ -128,7 +110,6 @@ export default {
                   edad: this.edad,
                   race: this.raza,
                   sex: this.sexo,
-                  especie: this.animal,
                   imgSrc: this.url,
                   info: this.text,
                   city: this.ciudad
@@ -139,7 +120,6 @@ export default {
             });
           });
     },
-
     
   },
   data: () => ({
@@ -150,7 +130,6 @@ export default {
     raza: "",
     sexo: "",
     text: "",
-    animal: "",
     ciudad: "",
     personas: [],
     loading: false,
