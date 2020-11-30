@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import firebase from "firebase"
+import firebase from "firebase";
 import {mapState, mapGetters, mapActions} from "vuex";
 export default {
   

@@ -1,5 +1,5 @@
 <template>
-  <v-footer dark padless class="footer">
+  <v-footer dark padless>
     <v-card class="flex" flat tile>
       <v-card-title class="teal">
         <strong class="subheading"></strong>
@@ -7,23 +7,21 @@
         <strong>Todos los derechos reservados</strong>
 
         <v-spacer></v-spacer>
-
-        <v-card-text class="d-flex justify-center">
-          <v-btn
-            v-for="(icon, i) in icons"
-            :key="i"
-            class="mx-5 white--text"
-            icon>
-            <a :href="icon.link">
-            <v-icon color="white darken-2">{{ icon.icono }}</v-icon></a>
-          </v-btn>
-        </v-card-text>
+ 
+        <v-btn
+          v-for="(icon,i) in icons"
+          :key="i"
+          :href="icon.link"
+          class="mx-4" dark icon
+          
+        >
+          <v-icon size="24px">
+            {{ icon.icono }}
+          </v-icon>
+        </v-btn>
       </v-card-title>
     </v-card>
   </v-footer>
-
-
-
 </template>
 <script>
 export default {
@@ -57,4 +55,5 @@ export default {
 .v-card__title {
   background-color: #343a40;
 }
+/* #5d17eb color */
 </style>
