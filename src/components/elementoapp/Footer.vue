@@ -55,4 +55,6 @@ export default {
 .v-card__title {
   background-color: #343a40;
 }
+
+/* #5d17eb color */
 </style>

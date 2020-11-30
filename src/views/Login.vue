@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="w-50 m-auto">
+    <div class="w-50 m-auto login__input">
       <b-form-group id="input-group-1" label="E-mail:" label-for="input-1">
         <b-form-input
           id="input-1"
@@ -108,5 +108,8 @@ export default {
 <style lang="css">
 .btn {
   margin: 20px;
+}
+.login__input {
+  background-image: url("../assets/logo-transparente.png");
 }
 </style>
