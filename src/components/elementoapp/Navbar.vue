@@ -1,7 +1,7 @@
 <template>
   <div>
       <b-navbar toggleable type="dark" variant="dark">
-        <b-navbar-brand href="#">L O G O + MatchCan, CanInder, CitaDog, datingDog</b-navbar-brand>
+        <b-navbar-brand href="#">DatingDog</b-navbar-brand>
 
         <b-navbar-toggle target="navbar-toggle-collapse">
           <template #default="{ expanded }">
