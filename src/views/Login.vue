@@ -104,15 +104,11 @@ export default {
   },
 };
 </script>
-<<<<<<< HEAD
-
-=======
 <style lang="css">
 .btn {
   margin: 20px;
 }
 .login__input {
-  background-image: url("../assets/logo-transparente.png");
+  background-image: url("../assets/bg-login.jpg");
 }
 </style>
->>>>>>> 8a7960d3a696a0eb1f2fce5349195b0fa27fc28e
