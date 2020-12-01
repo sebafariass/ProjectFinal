@@ -32,9 +32,9 @@
             </div>
           </v-card-text>
 
-          <v-card-actions class="pt-2">
+         
             <v-btn @click="info_card = false"> Cerrar </v-btn>
-          </v-card-actions>
+          
         </v-card>
       </v-expand-transition>
     </v-card>
