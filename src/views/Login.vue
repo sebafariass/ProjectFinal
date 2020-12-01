@@ -1,7 +1,7 @@
 <template>
   <div class="login__input">
     <div class="w-50 m-auto">
-      <b-form-group id="input-group-1" label="E-mail:" label-for="input-1">
+      <b-form-group id="input-group-1" label="Mail:" label-for="input-1" class="letras" >
         <b-form-input
           id="input-1"
           v-model="email"
@@ -11,7 +11,7 @@
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-2" label="password:" label-for="input-2">
+      <b-form-group id="input-group-2" label="Contraseña:" label-for="input-2" class="letras" >
         <b-form-input
           id="input-2"
           v-model="password"
@@ -111,6 +111,8 @@ export default {
   margin: 20px;
   background-color: #e28585;
   border: #e28585;
+  font-family: 'Sansita Swashed', cursive;
+  
 }
 .login__input {
   background: url("../assets/bg-login.jpg") no-repeat center fixed;
@@ -122,5 +124,9 @@ export default {
 }
 .botones__login {
   text-align: center;
+}
+.letras {
+  color: white;
+  font-family: 'Sansita Swashed', cursive;
 }
 </style>

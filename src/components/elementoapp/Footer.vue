@@ -1,32 +1,42 @@
 <template>
-  <v-footer dark padless class="footer">
-    <v-card class="flex" flat tile>
-      <v-card-title class="teal">
-        <strong class="subheading"></strong>
-        {{ new Date().getFullYear() }} —
-        <strong>Todos los derechos reservados</strong>
-
-        <v-spacer></v-spacer>
- 
+  <v-footer class="footer"
+    dark
+    padless
+  >
+    <v-card
+      flat
+      tile
+      class="lighten-1 white--text text-center" style="width: 100%; background: #e28585"
+    >
+      <v-card-text class="p-0">
         <v-btn
-          v-for="(icon,i) in icons"
-          :key="i"
+          v-for="icon in icons"
+          :key="icon"
           :href="icon.link"
-          class="mx-4" dark icon
-          
+          class="mx-4 white--text"
+          icon
         >
           <v-icon size="24px">
             {{ icon.icono }}
           </v-icon>
         </v-btn>
-      </v-card-title>
+      </v-card-text>
+
+      <v-card-text class="white--text p-0">
+      </v-card-text>
+
+      <v-divider></v-divider>
+
+      <v-card-text class="white--text p-0">
+       <i class="fas fa-paw fa-1x"></i> {{ new Date().getFullYear() }} — <strong> Todos los derechos reservados</strong>
+      </v-card-text>
     </v-card>
   </v-footer>
 </template>
 <script>
-export default {
-  data: () => ({
-    icons: [
+  export default {
+    data: () => ({
+       icons: [
       {
         icono: "mdi-facebook",
         link: "http://www.facebook.com/",
@@ -44,29 +54,14 @@ export default {
         link: "https://www.instagram.com/",
       },
     ],
-  }),
-};
+    }),
+  }
 </script>
 <style lang="css">
 .footer {
   font-family: 'Sansita Swashed', cursive;
-  font-size: 20px;
-}
-.teal {
-  background-color: #bd9b83 !important;
-}
+};
 
-.v-card__title + .v-card__subtitle,
-.v-card__title + .v-card__text {
-  background-color: #bd9b83;
-}
-.v-card__title .teal{
-  background-color: #bd9b83;
-}
 
-.v-footer {
-  background-color: #bd9b83;
-}
 
-/* #5d17eb color */
 </style>
