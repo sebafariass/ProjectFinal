@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-
-<template>
-  <div>
-    <h2 class="text-center">Recupera tu contraseña aquí</h2>
-    <b-form-input class="input__recuperar" v-model="text" placeholder="Ingrese su email"></b-form-input>
-
-    <b-button class=" boton__recuperar mx-5" variant="success">Recuperar</b-button>
-</div>
-</template>
-
-<style lang="scss">
-    .text-center {
-        padding: 30px;
-    }
-    .input__recuperar {
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-    .boton__recuperar {
-        margin: 30px;
-    }
-</style>
-=======
 <template>
  <div >
         <v-container> 
@@ -60,6 +36,7 @@
           x-large
           class="py-2 my-2"
           @click="crear_user"
+          to="/home"
         >
          <v-icon left >mdi-heart</v-icon>
           Únete a nosotros</v-btn>
@@ -125,4 +102,3 @@ export default {
   },
 };
 </script>
->>>>>>> 381811336b6be2ca201b0bf1f90c5c513a76e28f

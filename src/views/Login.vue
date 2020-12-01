@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="w-50  m-auto mt-5" >
+    <div class="w-50 m-auto login__input">
       <b-form-group id="input-group-1" label="E-mail:" label-for="input-1">
         <b-form-input
           id="input-1"
@@ -20,21 +20,23 @@
         ></b-form-input>
       </b-form-group>
 
-      <b-button type="submit" variant="primary" @click="login">Iniciar sesión</b-button>
+      <b-button type="submit" class="mb-3" variant="primary" @click="login">Iniciar sesión</b-button>
 
       <!--Boton GOOGLE-->
-      <b-button @click="logInGoogle" variant="success">
+      <b-button class="mb-3"  @click="logInGoogle" variant="success">
         Continuar con Gmail
+        
       </b-button>
+      <br>
       <!--Boton para registro -->
-      <b-button @click="Registro" variant="success">
+      <b-button class="mb-3" @click="Registro" variant="success">
         Regístrate
       </b-button>
 
-
+    </div>
        
     </div>
-  </div>
+  
 </template>
 
 <script>
@@ -102,4 +104,15 @@ export default {
   },
 };
 </script>
+<<<<<<< HEAD
 
+=======
+<style lang="css">
+.btn {
+  margin: 20px;
+}
+.login__input {
+  background-image: url("../assets/logo-transparente.png");
+}
+</style>
+>>>>>>> 8a7960d3a696a0eb1f2fce5349195b0fa27fc28e
