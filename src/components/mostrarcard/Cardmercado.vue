@@ -38,7 +38,7 @@
         </v-card-text>
 
         <v-card-actions class="mb-3">
-          <v-btn class="btnCerrarAdoption" id="btnCerrarAdoption" @click="reveal = false">
+          <v-btn  @click="reveal = false">
             Cerrar
           </v-btn>
         </v-card-actions>
@@ -64,27 +64,8 @@ export default {
   position: absolute;
   width: 100%;
 }
-.cardAdoption {
-  font-family: "Source sans pro";
-}
-.tituloCard {
-  color: #2c3e50c2 !important;
-  font-size: 25px;
-}
-.textCard {
-  text-align: left;
-  color: #2c3e50c2 !important;
-  font-size: 14px;
-}
-.btnCerrarAdoption {
-  background-color: #fcd34f !important;
-  color: #ffffff !important;
-  margin-top: 20px;
-}
-.btnMoreAdoption {
-  background-color: #fcbd11 !important;
-  color: #ffffff !important;
-}
+
+
 .contactoCard {
   font-weight: bold;
   margin-top: 20px;

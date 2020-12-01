@@ -4,7 +4,7 @@
    
 
     <!-- Tabla para Leer Información -->
-    <h4 class="titleTable">Tienda de Trueques</h4>
+    <h4 class="titleTable text-center">Tienda de Trueques</h4>
 
     <table class="table">
       <thead>
