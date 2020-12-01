@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-
-<template>
-  <div>
-    <h2 class="text-center">Recupera tu contraseña aquí</h2>
-    <b-form-input class="input__recuperar" v-model="text" placeholder="Ingrese su email"></b-form-input>
-
-    <b-button class=" boton__recuperar mx-5" variant="success">Recuperar</b-button>
-</div>
-</template>
-
-<style lang="scss">
-    .text-center {
-        padding: 30px;
-    }
-    .input__recuperar {
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-    .boton__recuperar {
-        margin: 30px;
-    }
-</style>
-=======
 <template>
  <div >
         <v-container> 
@@ -56,7 +32,7 @@
 
         <v-btn
           dark
-          color="dark lighten-1"
+          color="success"
           x-large
           class="py-2 my-2"
           @click="crear_user"
@@ -69,17 +45,13 @@
 
 
         <!-- ////// CREAR USUARIO BTN  \\\\\\ -->
-
-        <v-btn
-          dark
-          color="red accent-2"
-          x-large
-          class="py-2 ml-2"
-          @click="dialog = false"
-        >
-          <v-icon left>mdi-close</v-icon>
-          Cerrar
-        </v-btn>
+   <v-btn class="mx-2"  to="/home" @click="dialog = false"   x-large dark small color="dark">
+      <v-icon dark>mdi-minus
+        
+      </v-icon>
+      Cerrar
+    </v-btn>
+     
 
         <!-- //////  FINAL DE CREAR USUARIO \\\\\\\ -->
       </v-card>
@@ -125,4 +97,3 @@ export default {
   },
 };
 </script>
->>>>>>> 381811336b6be2ca201b0bf1f90c5c513a76e28f

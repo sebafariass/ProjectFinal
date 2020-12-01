@@ -29,13 +29,14 @@
             stream
           ></v-progress-linear>
         </div>
-        <v-card
+        <br>
+        <v-card 
           v-for="(persona, i) in personas"
           :key="i"
           class="mx-auto"
           max-width="344"
-        >
-          <v-img  :src="persona.data.imgSrc" height="200px"> </v-img>
+        > 
+          <v-img  class="mt-5" :src="persona.data.imgSrc" height="200px"> </v-img>
 
           <v-card-title>
             {{ persona.data.name }}

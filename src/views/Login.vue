@@ -20,14 +20,14 @@
         ></b-form-input>
       </b-form-group>
 
-      <b-button type="submit" variant="primary" @click="login">Iniciar sesión</b-button>
+      <b-button type="submit" class="mb-3" variant="primary" @click="login">Iniciar sesión</b-button>
 
       <!--Boton GOOGLE-->
-      <b-button @click="logInGoogle" variant="success">
+      <b-button class="mb-3"  @click="logInGoogle" variant="success">
         Continuar con Gmail
       </b-button>
       <!--Boton para registro -->
-      <b-button @click="Registro" variant="success">
+      <b-button class="mb-3" @click="Registro" variant="success">
         Regístrate
       </b-button>
 

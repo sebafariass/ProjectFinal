@@ -1,7 +1,7 @@
 <template>
   <div>
       <b-navbar toggleable type="dark" variant="dark">
-        <b-navbar-brand href="#">DatingDog</b-navbar-brand>
+          <b-navbar-brand href="#">DatingDog</b-navbar-brand>
 
         <b-navbar-toggle target="navbar-toggle-collapse">
           <template #default="{ expanded }">
@@ -18,10 +18,11 @@
             <b-nav-item to="/muestra">MatchCan</b-nav-item>
             <b-nav-item to="/recuperar">Recuperar clave</b-nav-item>
             <b-nav-item @click="logout">Logout</b-nav-item>
-          
+
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
+    
     </div>
 </template>
 
