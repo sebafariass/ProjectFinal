@@ -36,7 +36,7 @@
           x-large
           class="py-2 my-2"
           @click="crear_user"
-          to="/home"
+          
         >
          <v-icon left >mdi-heart</v-icon>
           Únete a nosotros</v-btn>
@@ -53,6 +53,7 @@
           x-large
           class="py-2 ml-2"
           @click="dialog = false"
+          to="/home"
         >
           <v-icon left>mdi-close</v-icon>
           Cerrar

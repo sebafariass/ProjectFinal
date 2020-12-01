@@ -5,7 +5,7 @@
         <v-main>
           <!-- consumir datos por el metodo change -->
        
-          <h1>REGISTRA TU MASCOTA!</h1>
+          <h1>Registra a tu mascota con nosotros</h1>
           <v-text-field v-model="nombre" label="Nombre"></v-text-field>
           <v-text-field v-model="edad" label="Edad"></v-text-field>
            <v-text-field v-model="raza" label="Raza"></v-text-field>
@@ -29,13 +29,14 @@
             stream
           ></v-progress-linear>
         </div>
-        <v-card
+        <br>
+        <v-card 
           v-for="(persona, i) in personas"
           :key="i"
           class="mx-auto"
           max-width="344"
-        >
-          <v-img  :src="persona.data.imgSrc" height="200px"> </v-img>
+        > 
+          <v-img  class="mt-5" :src="persona.data.imgSrc" height="200px"> </v-img>
 
           <v-card-title>
             {{ persona.data.name }}
@@ -139,12 +140,7 @@ export default {
 
 
 <style>
-.btnLogout {
-  color: #ffffff;
-  background-color: rgb(3, 170, 148);
-  border-style: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin-top: 50px;
+.custom-select {
+  margin: 20px;
 }
 </style>

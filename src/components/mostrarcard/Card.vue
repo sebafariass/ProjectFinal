@@ -27,7 +27,6 @@
               <div><b>Edad:</b> {{ personaje.data.edad }}</div>
               <div><b>Raza:</b> {{ personaje.data.race }}</div>
               <div><b>Sexo:</b> {{ personaje.data.sex }}</div>
-              <div><b>Especie:</b> {{ personaje.data.especie }}</div>
              <div><b>Ciudad:</b> {{ personaje.data.city }}</div>
              <div><b>Info:</b> {{ personaje.data.info }}</div>
             </div>
