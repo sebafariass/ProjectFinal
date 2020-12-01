@@ -42,10 +42,11 @@ h1 {
 }
 
 .barraColorFooter {
-  background: #ff0000;
+  /*background: #ff0000;
   background: linear-gradient(122deg, #ff0000 0%, #7100ff 80%);
   background: -webkit-linear-gradient(122deg, #ff0000 0%, #7100ff 80%);
-  background: -moz-linear-gradient(122deg, #ff0000 0%, #7100ff 80%);
+  background: -moz-linear-gradient(122deg, #ff0000 0%, #7100ff 80%);*/
+  background: #bd9b83;
   height: 200px;
   width: 100%;
 }

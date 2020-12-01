@@ -1,8 +1,9 @@
 <template>
   <div>
-      <b-navbar toggleable type="dark" variant="dark">
+      <b-navbar toggleable type="dark" class="navegacion" ariant="dark">
         <b-navbar-brand href="#">
-          <img src="../../assets/logo-transparente.png" width="120" height="120" alt="">
+          <i class="fas fa-paw fa-2x"></i> 
+          <!--<img src="../../assets/logo-transparente.png" width="50" height="50" alt=""-->
           DatingDog
         </b-navbar-brand>
 
@@ -47,4 +48,9 @@ export default {
 </script>
 
 <style lang="css">
+.navegacion {
+  background-color: #e28585;
+  font-family: 'Sansita Swashed', cursive;
+}
+
 </style>

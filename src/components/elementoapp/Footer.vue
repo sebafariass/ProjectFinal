@@ -1,5 +1,5 @@
 <template>
-  <v-footer dark padless>
+  <v-footer dark padless class="footer">
     <v-card class="flex" flat tile>
       <v-card-title class="teal">
         <strong class="subheading"></strong>
@@ -48,12 +48,25 @@ export default {
 };
 </script>
 <style lang="css">
+.footer {
+  font-family: 'Sansita Swashed', cursive;
+  font-size: 20px;
+}
+.teal {
+  background-color: #bd9b83 !important;
+}
+
 .v-card__title + .v-card__subtitle,
 .v-card__title + .v-card__text {
-  background-color: #343a40;
+  background-color: #bd9b83;
 }
-.v-card__title {
-  background-color: #343a40;
+.v-card__title .teal{
+  background-color: #bd9b83;
 }
+
+.v-footer {
+  background-color: #bd9b83;
+}
+
 /* #5d17eb color */
 </style>

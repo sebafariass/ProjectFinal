@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="w-50 m-auto login__input">
+  <div class="login__input">
+    <div class="w-50 m-auto">
       <b-form-group id="input-group-1" label="E-mail:" label-for="input-1">
         <b-form-input
           id="input-1"
@@ -19,7 +19,7 @@
           placeholder="Ingrese Contraseña"
         ></b-form-input>
       </b-form-group>
-
+      <div class="botones__login">
       <b-button type="submit" class="mb-3" variant="primary" @click="login">Iniciar sesión</b-button>
 
       <!--Boton GOOGLE-->
@@ -27,11 +27,12 @@
         Continuar con Gmail
         
       </b-button>
-      <br>
+      
       <!--Boton para registro -->
-      <b-button class="mb-3" @click="Registro" variant="success">
+      <b-button class= "mb-3" @click="Registro" variant="success">
         Regístrate
       </b-button>
+      </div>
 
     </div>
        
@@ -106,9 +107,20 @@ export default {
 </script>
 <style lang="css">
 .btn {
+
   margin: 20px;
+  background-color: #e28585;
+  border: #e28585;
 }
 .login__input {
-  background-image: url("../assets/bg-login.jpg");
+  background: url("../assets/bg-login.jpg") no-repeat center fixed;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.botones__login {
+  text-align: center;
 }
 </style>
