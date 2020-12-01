@@ -30,6 +30,7 @@
           ></v-progress-linear>
         </div>
         <br>
+        <h2 class="text-center">Mascotas Disponibles</h2>
         <v-card 
           v-for="(persona, i) in personas"
           :key="i"

@@ -71,7 +71,7 @@
 import firebase from "firebase";
 import { mapActions } from "vuex";
 export default {
-  name: "Recuperar",
+  name: "Iniciosesion",
   data() {
     return {
         dialog: false,

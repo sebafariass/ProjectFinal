@@ -42,10 +42,10 @@ const routes = [
         },
     },
     {
-      path: "/recuperar",
-      name: "Recuperar",
+      path: "/iniciosesion",
+      name: "Iniciosesion",
       component: () =>
-        import("../views/Recuperar.vue"),
+        import("../views/Iniciosesion.vue"),
         meta: {
           login: true,
         },
