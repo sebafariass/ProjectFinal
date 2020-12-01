@@ -5,7 +5,7 @@
         <v-main>
           <!-- consumir datos por el metodo change -->
        
-          <h1>REGISTRA TU MASCOTA!</h1>
+          <h1>Registra a tu mascota con nosotros</h1>
           <v-text-field v-model="nombre" label="Nombre"></v-text-field>
           <v-text-field v-model="edad" label="Edad"></v-text-field>
            <v-text-field v-model="raza" label="Raza"></v-text-field>
@@ -140,12 +140,7 @@ export default {
 
 
 <style>
-.btnLogout {
-  color: #ffffff;
-  background-color: rgb(3, 170, 148);
-  border-style: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin-top: 50px;
+.custom-select {
+  margin: 20px;
 }
 </style>
