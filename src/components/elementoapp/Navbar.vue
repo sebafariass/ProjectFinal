@@ -18,9 +18,9 @@
           <b-navbar-nav class="ml-auto">
             <b-nav-item to="/login">Login</b-nav-item>
             <b-nav-item to="/home">Home</b-nav-item>
-            <b-nav-item to="/registro">Registro</b-nav-item>
+            <b-nav-item to="/registro">Registro de Mascotas</b-nav-item>
             <b-nav-item to="/muestra">MatchCan</b-nav-item>
-            <b-nav-item to="/recuperar">Recuperar clave</b-nav-item>
+            <b-nav-item to="/iniciosesion">Registra tu usuario</b-nav-item>
             <b-nav-item @click="logout">Logout</b-nav-item>
 
           </b-navbar-nav>
