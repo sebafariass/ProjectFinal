@@ -10,12 +10,10 @@
     >
       <v-card-text class="p-0">
         <v-btn
-          v-for="icon in icons"
-          :key="icon"
-          :href="icon.link"
-          class="mx-4 white--text"
-          icon
-        >
+          v-for="(icon,j) in icons"
+          :key="j"
+          :href="j.link"
+          class="mx-4 white--text" icon>
           <v-icon size="24px">
             {{ icon.icono }}
           </v-icon>
