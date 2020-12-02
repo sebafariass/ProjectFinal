@@ -1,10 +1,10 @@
 <!-- Template -->
 <template>
   <div>
-    <b-container class="banner_mercado p-5 mt-3">
+    <v-container class="banner_mercado p-5 mt-3">
     Sección para que los usuarios puedan compartir utensilios de sus mascotas para compartir 
     con los demas usuarios registrados
-    </b-container>
+    </v-container>
 
     <div class="container">
       <v-container>
@@ -20,12 +20,15 @@
 
 <!-- Script -->
 <script>
-import firebase from "firebase"
-import Card from "@/components/mostrarcard/Card.vue";
+
+import Cardmercado from "@/components/mostrarcard/Cardmercado.vue";
 import { mapState } from "vuex";
 export default {
 
   name: "Mercado",
+   data: {
+     Cardmercado : "",
+   },
   computed: {
     ...mapState(["trueques"]),
   },
@@ -36,7 +39,7 @@ export default {
 </script>
 
 <!-- Style -->
-<style lang="scss">
+<style >
 
 
 

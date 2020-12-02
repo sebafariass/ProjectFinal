@@ -46,7 +46,9 @@ const routes = [
       name: "Iniciosesion",
       component: () =>
         import("../views/Iniciosesion.vue"),
-       
+        meta: {
+          login: true,
+        },
     },
     {
       path: "/mercado",

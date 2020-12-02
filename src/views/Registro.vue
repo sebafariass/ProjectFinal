@@ -77,6 +77,7 @@
 
 <script>
 import firebase from "firebase";
+import Card from "@/components/mostrarcard/Card.vue";
 import { mapState, mapGetters, mapActions } from "vuex";
 import router from "../router/index.js";
 export default {
@@ -101,9 +102,7 @@ export default {
   computed: {
     ...mapState(["razas", "edades"]),
   },
-  components: {
-    Card,
-  },
+ 
   mounted() {
     firebase
       .firestore()
@@ -174,6 +173,9 @@ export default {
     personas: [],
     loading: false,
   }),
+   components: {
+    Card,
+  },
 };
 </script>
 
