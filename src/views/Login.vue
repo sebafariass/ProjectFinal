@@ -40,7 +40,7 @@
         </b-button>
 
         <!--Boton para registro -->
-        <b-button class="mb-3" @click="Registro" variant="success">
+        <b-button class="mb-3" @click="goRegistro" variant="success">
           Regístrate
         </b-button>
       </div>
@@ -71,6 +71,10 @@ export default {
     };
   },
   methods: {
+    goRegistro() {
+      this.$router.replace("/registro")
+    },
+
     login() {
       const email = this.email;
       const password = this.password;
