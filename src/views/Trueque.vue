@@ -277,7 +277,7 @@ export default {
 
 }
 .trueque__pagina {
-   background: url("../assets/bg-trueque2.jpg") no-repeat center fixed;
+   background: url("../assets/bg-truque3.jpg") no-repeat center fixed;
   height: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
