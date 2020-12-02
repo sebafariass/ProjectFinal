@@ -21,13 +21,14 @@
         <v-card-text class="pb-0">
           <div class="textCard" id="textoCard">
             <h5 class="contactoCard">Datos del Trueque</h5>
-            <div id="nombreMascota"><b>Nombre de dueño:</b> {{ tienda.data.nombre }}</div>
-            <div id="sexoMascota"><b>Nombre del Producto:</b> {{ tienda.data.producto }}</div>
-            <div id="edadMascota"><b>Tiempo de uso:</b> {{ tienda.data.tiempo }}</div>
+            <div id="nombre_dueño"><b>Nombre de dueño:</b> {{ tienda.data.nombre }}</div>
+            <div id="nombre_producto"><b>Nombre del Producto:</b> {{ tienda.data.producto }}</div>
+            <div id="uso_producto"><b>Tiempo de uso:</b> {{ tienda.data.tiempo }}</div>
             <div id="causa_trueque"><b>¿Por qué lo truequeas?:</b> {{ tienda.data.causa }}</div>
             <div id="intercambio_trueque"><b>Intercambio:</b> {{ tienda.data.intercambio}}</div>
             <div id="ciudad_trueque"><b>Ciudad en la que vives:</b> {{ tienda.data.ciudad }}</div>
             <div>
+
               <h5 class="contactoCard" id="datosContacto">Datos contacto</h5>
               <div id="nombreContacto"><b>Email :</b> {{ tienda.data.contacto }}</div>
               <div id="numeroContacto"><b>Whatssap Contacto</b> {{ tienda.data.wsapp }}</div>

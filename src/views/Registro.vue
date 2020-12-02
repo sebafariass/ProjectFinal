@@ -67,23 +67,9 @@
         </div>
         <br />
         <h2 class="text-center">Mascotas Disponibles</h2>
-        <v-card
-          v-for="(persona, i) in personas"
-          :key="i"
-          class="mx-auto"
-          max-width="344"
-        >
-          <v-img class="mt-5" :src="persona.data.imgSrc" height="200px">
-          </v-img>
+   
 
-          <v-card-title>
-            {{ persona.data.name }}
-          </v-card-title>
 
-          <v-card-subtitle>
-            {{ persona.data.edad }}
-          </v-card-subtitle>
-        </v-card>
       </v-container>
     </div>
   </div>
@@ -114,6 +100,9 @@ export default {
   },
   computed: {
     ...mapState(["razas", "edades"]),
+  },
+  components: {
+    Card,
   },
   mounted() {
     firebase

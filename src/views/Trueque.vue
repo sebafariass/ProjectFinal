@@ -124,7 +124,7 @@
         <b-form-input  v-model="contacto"> </b-form-input>
       </b-form-group>
 
-      <b-form-group  id="input-group-2" label="Wsapp:" label-for="input-2">
+      <b-form-group id="input-group-2" label="Wsapp:" label-for="input-2">
         <b-form-input v-model="wsapp"> </b-form-input>
       </b-form-group>
 

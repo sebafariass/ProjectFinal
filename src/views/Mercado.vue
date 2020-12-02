@@ -20,7 +20,8 @@
 
 <!-- Script -->
 <script>
-import Cardmercado from "@/components/mostrarcard/Cardmercado.vue";
+import firebase from "firebase"
+import Card from "@/components/mostrarcard/Card.vue";
 import { mapState } from "vuex";
 export default {
 
