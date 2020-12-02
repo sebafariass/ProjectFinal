@@ -31,22 +31,9 @@
         </div>
         <br>
         <h2 class="text-center">Mascotas Disponibles</h2>
-        <v-card 
-          v-for="(persona, i) in personas"
-          :key="i"
-          class="mx-auto"
-          max-width="344"
-        > 
-          <v-img  class="mt-5" :src="persona.data.imgSrc" height="200px"> </v-img>
+   
 
-          <v-card-title>
-            {{ persona.data.name }}
-          </v-card-title>
 
-          <v-card-subtitle>
-            {{ persona.data.edad }}
-          </v-card-subtitle>
-        </v-card>
       </v-container>
     </div>
   </div>
@@ -54,6 +41,7 @@
 
 <script>
 import firebase from "firebase"
+
 import {mapState, mapGetters, mapActions} from "vuex";
 export default {
     data() {
@@ -63,7 +51,11 @@ export default {
     },
   computed: {
     ...mapState(['razas']),
-    ...mapState(['edades'])
+    ...mapState(['edades']),
+   
+  },
+  components: {
+    Card,
   },
   mounted() {
     firebase

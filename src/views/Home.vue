@@ -16,16 +16,30 @@
       <b-form-select-option v-model="selected" :value="null">Selecciona una edad</b-form-select-option>
       <b-form-select-option v-for="(edad,j) in edades" :key="j" :value="null">{{edad.data.rango}}</b-form-select-option>
     </b-form-select>
+
+       <div>
+      <v-container>
+        <v-row>
+          <v-col md="4" v-for="(personaje, i) in personas" :key="i">
+            <Card :personaje="personaje" />
+          </v-col>
+        </v-row>
+      </v-container>
+      
+    </div>
   </div>
 </b-container>
 </template>
 
 <script>
+import Card from "@/components/mostrarcard/Card.vue";
 import {mapState, mapGetters, mapActions} from "vuex";
+
   export default {
     data() {
-      selected : "null"
+      
       return {
+        selected : "null",
         rango: "",
         nombre: "",
         raza: {
@@ -37,11 +51,22 @@ import {mapState, mapGetters, mapActions} from "vuex";
           data: {
             rango: ""
           }
+        },
+         personaje: {
+        data: {
+          imgSrc : "",
+
         }
+      }
       }  
+      
     },
       computed: {
     ...mapState(['razas','edades']),
+    ...mapState(["personas"]),
+  },
+   components: {
+    Card,
   },
   }
   

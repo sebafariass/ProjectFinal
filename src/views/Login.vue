@@ -29,7 +29,7 @@
       </b-button>
       <br>
       <!--Boton para registro -->
-      <b-button class="mb-3" @click="Registro" variant="success">
+      <b-button class="mb-3" @click="redigirigir" variant="success">
         Regístrate
       </b-button>
 
@@ -101,12 +101,13 @@ export default {
           console.error("Sign Out Error", e);
         });
     },
+
+    	redigirigir() {		
+				this.$router.push('iniciosesion')
+			},
   },
 };
 </script>
-<<<<<<< HEAD
-
-=======
 <style lang="css">
 .btn {
   margin: 20px;
@@ -115,4 +116,3 @@ export default {
   background-image: url("../assets/logo-transparente.png");
 }
 </style>
->>>>>>> 8a7960d3a696a0eb1f2fce5349195b0fa27fc28e

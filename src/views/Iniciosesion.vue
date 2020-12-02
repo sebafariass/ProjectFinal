@@ -89,6 +89,7 @@ export default {
     crear_user() {
       this.dialog = false;
       this.agregando_user(this.usuario);
+      this.$router.push('login')
     },
     ...mapActions(["agregando_user"]),
 
