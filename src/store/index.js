@@ -8,7 +8,8 @@ export default new Vuex.Store({
   state: {
     razas : [],
     edades : [],
-    personas : []
+    personas : [],
+    trueques: []
   },
   mutations: {
     GET_DATA_RAZAS(state, razas){
@@ -19,9 +20,30 @@ export default new Vuex.Store({
     },
     GET_DATA_PERSONAS(state, personas){
       state.personas = personas
+    },
+    GET_DATA_TRUEQUES(state, trueques){
+      state.trueques = trueques
     }
   },
   actions: {
+
+    async getDataTrueques({ commit }) {
+      try {
+        await firebase
+          .firestore()
+          .collection("trueques")
+          .onSnapshot((snapshot) => {
+            let trueques = [];
+            snapshot.forEach((p) => {
+              trueques.push({ id: p.id, data: p.data() });
+            });
+            commit("GET_DATA_TRUEQUES", trueques);
+          });
+      } catch (error) {
+        console.log("error:", error);
+      }
+    },
+
 
     agregando_user({ commit }, usuario) {
       try {
@@ -90,15 +112,36 @@ export default new Vuex.Store({
         console.log("error:", error);
       }
     },
+    agregar_trueques({ commit }, tienda) {
+      firebase
+        .firestore()
+        .collection("trueques")
+        .add(tienda);
+    },
+    update_trueque({ commit }, tienda) {
+      firebase
+        .firestore()
+        .collection("trueques")
+        .doc(tienda.id)
+        .update(tienda.data);
+    },
+    eliminar_trueque({ commit }, id) {
+      firebase
+        .firestore()
+        .collection("trueques")
+        .doc(id)
+        .delete();
+    },
+
     },
 
 
-  //   getters: {
-  //   getJugueteUpdating: (state) => (id) => {
-  //     return state.razas.find(r => r.id === id)
-  //   }
+    getters: {
+    getTiendaUpdating: (state) => (id) => {
+      return state.trueques.find(r => r.id === id)
+    }
 
-  // },
+  },
  
   modules: {},
 });

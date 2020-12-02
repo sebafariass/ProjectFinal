@@ -50,6 +50,24 @@ const routes = [
           login: true,
         },
     },
+    {
+      path: "/mercado",
+      name: "Mercado",
+      component: () =>
+        import("../views/Mercado.vue"),
+        meta: {
+          login: true,
+        },
+    },
+    {
+      path: "/trueque",
+      name: "Trueque",
+      component: () =>
+        import("../views/Trueque.vue"),
+        meta: {
+          login: true,
+        },
+    },
     
   ];
 
