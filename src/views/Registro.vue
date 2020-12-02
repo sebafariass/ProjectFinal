@@ -6,10 +6,27 @@
           <!-- consumir datos por el metodo change -->
        
           <h1>Registra a tu mascota con nosotros</h1>
-          <v-text-field v-model="nombre" label="Nombre"></v-text-field>
-          <v-text-field v-model="edad" label="Edad"></v-text-field>
-           <v-text-field v-model="raza" label="Raza"></v-text-field>
-          <v-text-field v-model="sexo" label="Sexo"></v-text-field>
+
+        
+
+        <v-text-field v-model="nombre" label="Nombre"></v-text-field>
+          <!-- Select Edad -->
+        <b-form-select v-model="selectedEdad" >
+          <b-form-select-option :value=0>Selecciona una edad</b-form-select-option>
+          <b-form-select-option v-for="(edad,j) in edades" :key="j" :value="edad.data.rango">{{edad.data.rango}}</b-form-select-option>
+        </b-form-select>
+          <!-- Select Raza -->
+        <b-form-select class="my-5" v-model="selectedRaza">
+          <b-form-select-option class="select" :value=0 >Selecciona una raza</b-form-select-option>
+          <b-form-select-option class="select" v-for="(raza,i) in razas" :key="i" :value="raza.data.nombre">{{raza.data.nombre}}</b-form-select-option>
+        </b-form-select>
+        <!-- Select Sexo -->
+          <b-form-select class="my-5" v-model="selectedSexo">
+            <b-form-select-option class="select" :value=0 >Selecciona Sexo</b-form-select-option>
+            <b-form-select-option class="select" value="Macho" >Macho</b-form-select-option>
+            <b-form-select-option class="select" value="Hembra" >Hembra</b-form-select-option>
+          </b-form-select>
+
           <v-text-field v-model="ciudad" label="Ciudad"></v-text-field>
           <v-text-field v-model="text" label="Información Extra"></v-text-field>
           <v-file-input
@@ -54,16 +71,29 @@
 
 <script>
 import firebase from "firebase"
-import {mapState, mapGetters, mapActions} from "vuex";
+import {mapState, mapGetters, mapActions} from "vuex"
+import router from "../router/index.js"
 export default {
     data() {
       return {
-     
+        rango: "",
+        nombre: "",
+        raza: {
+          data: {
+            nombre: "",
+            codigo: ""
+          }
+        },
+        edad: {
+          data: {
+            rango: "",
+            codigo: ""
+          }
+        }
       }  
     },
   computed: {
-    ...mapState(['razas']),
-    ...mapState(['edades'])
+    ...mapState(['razas','edades']),
   },
   mounted() {
     firebase
@@ -109,9 +139,9 @@ export default {
                 .collection("personas")
                 .add({
                   name: this.nombre,
-                  edad: this.edad,
-                  race: this.raza,
-                  sex: this.sexo,
+                  edad: this.selectedEdad,
+                  race: this.selectedRaza,
+                  sex: this.selectedSexo,
                   imgSrc: this.url,
                   info: this.text,
                   city: this.ciudad
@@ -128,9 +158,9 @@ export default {
     imagen: "",
     url: "",
     nombre: "",
-    edad: "",
-    raza: "",
-    sexo: "",
+    selectedEdad: 0,
+    selectedRaza: 0,
+    selectedSexo: 0,
     text: "",
     ciudad: "",
     personas: [],
