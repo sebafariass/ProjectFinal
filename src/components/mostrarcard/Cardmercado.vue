@@ -1,13 +1,13 @@
 <template>
-  <v-card class="cardAdoption mx-auto" max-width="344">
+  <v-card class="mx-auto" max-width="400">
     <v-card-text>
       <v-card-title class="tituloCard">{{ tienda.data.nombre }}</v-card-title>
-      <v-img height="250" :src="tienda.data.img"></v-img>
+      <v-img height="300" :src="tienda.data.img"></v-img>
       <v-divider class="mx-4"></v-divider>
     </v-card-text>
 
-    <v-card-actions>
-      <v-btn class="btnMoreAdoption" id="btnMoreAdoption" @click="reveal = true">
+    <v-card-actions >
+      <v-btn  @click="reveal = true">
         Leer más
       </v-btn>
     </v-card-actions>
@@ -27,12 +27,10 @@
             <div id="causa_trueque"><b>¿Por qué lo truequeas?:</b> {{ tienda.data.causa }}</div>
             <div id="intercambio_trueque"><b>Intercambio:</b> {{ tienda.data.intercambio}}</div>
             <div id="ciudad_trueque"><b>Ciudad en la que vives:</b> {{ tienda.data.ciudad }}</div>
-
-
             <div>
               <h5 class="contactoCard" id="datosContacto">Datos contacto</h5>
-              <div id="nombreContacto"><b>Nombre:</b> {{ tienda.data.contacto }}</div>
-              <div id="numeroContacto"><b>Wsapp:</b> {{ tienda.data.wsapp }}</div>
+              <div id="nombreContacto"><b>Email :</b> {{ tienda.data.contacto }}</div>
+              <div id="numeroContacto"><b>Whatssap Contacto</b> {{ tienda.data.wsapp }}</div>
             </div>
           </div>
         </v-card-text>

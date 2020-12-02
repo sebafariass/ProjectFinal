@@ -1,10 +1,10 @@
-<!-- Template -->
+
 <template>
   <div class="">
    
 
     <!-- Tabla para Leer Información -->
-    <h4 class="titleTable text-center">Tienda de Trueques</h4>
+    <h2 class="text-center mt-5">Trueques subidos</h2>
 
     <table class="table">
       <thead>
@@ -45,14 +45,14 @@
         </tr>
       </tbody>
     </table>
- 
-    <!-- Modal Editar -->
-    <b-modal id="modal-1" title="BootstrapVue" class="EditForm">
-      <b-form-group  label="Agrega la URL de la magen:" label-for="input-1">
+
+
+<b-modal id="modal-1" title="BootstrapVue" class="EditForm">
+      <b-form-group id="input-group-1" label="Agrega la URL de la magen:" label-for="input-1">
         <b-form-input v-model="tienda.data.img"> </b-form-input>
       </b-form-group>
 
-      <b-form-group  label="Nombre:" label-for="input-1">
+      <b-form-group id="input-group-1"  label="Nombre:" label-for="input-1">
         <b-form-input id="editNameDog" v-model="tienda.data.nombre"> </b-form-input>
       </b-form-group>
 
@@ -60,70 +60,71 @@
         <b-form-input v-model="tienda.data.producto"> </b-form-input>
       </b-form-group>
 
-      <b-form-group  label="Tiempo de Uso:" label-for="input-2">
+      <b-form-group  id="input-group-2" label="Tiempo de Uso:" label-for="input-2">
         <b-form-input v-model="tienda.data.tiempo"> </b-form-input>
       </b-form-group>
 
-      <b-form-group  label="Causa de tu trueque:" label-for="input-2">
+      <b-form-group   id="input-group-2" label="Causa de tu trueque:" label-for="input-2">
         <b-form-input v-model="tienda.data.causa"> </b-form-input>
       </b-form-group>
 
-      <b-form-group  label="Intercambio Por:" label-for="input-2">
+      <b-form-group id="input-group-2" label="Intercambio Por:" label-for="input-2">
         <b-form-input v-model="tienda.data.intercambio"> </b-form-input>
       </b-form-group>
 
-      <b-form-group  label="Ciudad en la vives:" label-for="input-2">
+      <b-form-group  id="input-group-2" label="Ciudad en la vives:" label-for="input-2">
         <b-form-input v-model="tienda.data.ciudad"> </b-form-input>
       </b-form-group>
 
-      <b-form-group  label="Email de contacto:" label-for="input-2">
+      <b-form-group id="input-group-2" label="Email de contacto:" label-for="input-2">
         <b-form-input v-model="tienda.data.contacto"> </b-form-input>
       </b-form-group>
 
-      <b-form-group  label="Wsapp:" label-for="input-2">
+      <b-form-group  id="input-group-2" label="Wsapp:" label-for="input-2">
         <b-form-input v-model="tienda.data.wsapp"> </b-form-input>
       </b-form-group>
 
       <b-button type="submit" color="sucess" @click="update">Aceptar cambios</b-button>
     </b-modal>
     <hr />
-    
+
+
 <!-- Formulario Agregar Producto -->
     <h4 class="text-center">Agrega tu producto para el Mercado</h4>
     <div class="w-50 m-auto formAdd">
-      <b-form-group  label=" Agrega la URL de la Imagen:" class="mt-5" label-for="input-1">
+      <b-form-group  id="input-group-1" label=" Agrega la URL de la Imagen:" class="mt-5" label-for="input-1">
         <b-form-input  v-model="img"> </b-form-input>
       </b-form-group>
 
-      <b-form-group  label="Nombre:" label-for="input-1">
+      <b-form-group id="input-group-1"  label="Nombre:" label-for="input-1">
         <b-form-input  v-model="nombre"> </b-form-input>
       </b-form-group>
 
-      <b-form-group  label="Producto:" label-for="input-2">
+      <b-form-group  id="input-group-2" label="Producto:" label-for="input-2">
         <b-form-input  v-model="producto"> </b-form-input>
       </b-form-group>
 
-      <b-form-group  label="Tiempo de Uso:" label-for="input-2">
+      <b-form-group id="input-group-2" label="Tiempo de Uso:" label-for="input-2">
         <b-form-input  v-model="tiempo"> </b-form-input>
       </b-form-group>
 
-      <b-form-group  label="Causa:" label-for="input-2">
+      <b-form-group id="input-group-2" label="Causa:" label-for="input-2">
         <b-form-input  v-model="causa"> </b-form-input>
       </b-form-group>
 
-       <b-form-group  label="Intercambio:" label-for="input-2">
+       <b-form-group id="input-group-2" label="Intercambio:" label-for="input-2">
         <b-form-input  v-model="intercambio"> </b-form-input>
       </b-form-group>
 
-       <b-form-group  label="Ciudad en la que vives:" label-for="input-2">
+       <b-form-group id="input-group-2" label="Ciudad en la que vives:" label-for="input-2">
         <b-form-input  v-model="ciudad"> </b-form-input>
       </b-form-group>
 
-      <b-form-group  label="Email de Contacto:" label-for="input-2">
+      <b-form-group id="input-group-2" label="Email de Contacto:" label-for="input-2">
         <b-form-input  v-model="contacto"> </b-form-input>
       </b-form-group>
 
-      <b-form-group  label="Wsapp:" label-for="input-2">
+      <b-form-group  id="input-group-2" label="Wsapp:" label-for="input-2">
         <b-form-input v-model="wsapp"> </b-form-input>
       </b-form-group>
 
@@ -131,6 +132,10 @@
         <!--//////BOTON AGREGAR\\\\\ -->
       <b-button type="submit" class="btnAdd" @click="agregar">Agregar</b-button>
 
+
+   
+    <!-- Modal Editar -->
+    
 
     
     </div>
@@ -152,8 +157,7 @@ export default {
       tiempo: "",
       causa: "",
       intercambio: "",
-      ciudad: "",    
-      ninos: "",
+      ciudad: "", 
       contacto: "",
       wsapp: "",
       tienda: {
@@ -165,8 +169,6 @@ export default {
           causa: "",
           intercambio: "",
           ciudad: "",
-        
-          ninos: "",
           contacto: "",
           wsapp: "",
         },
@@ -178,12 +180,7 @@ export default {
     ...mapGetters(["getTiendaUpdating"]),
   },
   methods: {
-    logout() {
-      firebase
-        .auth()
-        .signOut()
-        .then(() => this.$router.replace("admin"));
-    },
+  
     ...mapActions(["agregar_trueques", "update_trueque", "eliminar_trueque"]),
     agregar() {
       const tienda = {
@@ -255,7 +252,7 @@ export default {
 }
 .btnAdd {
   color: #ffffff ;
-  background-color: #fcbd11 ;
+  background-color: #fc11f0 ;
   border-style: none ;
   border-radius: 5px;
   padding: 10px 20px;
@@ -264,7 +261,7 @@ export default {
 }
 .btnCambios {
   color: #ffffff ;
-  background-color: #fcbd11 ;
+  background-color: rgb(60, 133, 12) ;
   border-style: none ;
   border-radius: 5px;
   padding: 10px 20px;
