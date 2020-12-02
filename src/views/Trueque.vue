@@ -1,10 +1,10 @@
 
 <template>
-  <div class="">
+  <div class="trueque__pagina">
    
 
     <!-- Tabla para Leer Información -->
-    <h2 class="text-center mt-5">Trueques subidos</h2>
+    <h2 class="text-center">Trueques disponibles</h2>
 
     <table class="table">
       <thead>
@@ -252,7 +252,7 @@ export default {
 }
 .btnAdd {
   color: #ffffff ;
-  background-color: #fc11f0 ;
+  background-color: #e28585 ;
   border-style: none ;
   border-radius: 5px;
   padding: 10px 20px;
@@ -276,5 +276,23 @@ export default {
 @media (max-width: 768px) {
 
 }
+.trueque__pagina {
+   background: url("../assets/bg-trueque2.jpg") no-repeat center fixed;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.v-application .text-center  {
+  color: white;
+  font-family: "Sansita Swashed", cursive;
+}
+.table th, .table td {
+  color: white;
+  font-family: "Sansita Swashed", cursive;
+
+}
+
 
 </style>
