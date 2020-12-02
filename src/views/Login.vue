@@ -70,9 +70,7 @@ export default {
     };
   },
   methods: {
-    goRegistro() {
-      this.$router.replace("/registro")
-    },
+    
 
     login() {
       const email = this.email;
