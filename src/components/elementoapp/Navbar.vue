@@ -20,13 +20,9 @@
             <b-nav-item to="/home">Home</b-nav-item>
             <b-nav-item to="/registro">Registro de Mascotas</b-nav-item>
             <b-nav-item to="/muestra">MatchCan</b-nav-item>
-<<<<<<< HEAD
-            <b-nav-item to="/iniciosesion">Registra tu usuario</b-nav-item>
-=======
             <b-nav-item to="/iniciosesion">Registrar Usuario</b-nav-item>
             <b-nav-item to="/mercado">Mercadito</b-nav-item>
               <b-nav-item to="/trueque">Sube tu Trueque</b-nav-item>
->>>>>>> 4223fc4955ccb74ee55467b0a29d1098c34d082b
             <b-nav-item @click="logout">Logout</b-nav-item>
 
           </b-navbar-nav>
