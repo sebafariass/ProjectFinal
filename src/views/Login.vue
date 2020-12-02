@@ -30,16 +30,6 @@
         ></b-form-input>
       </b-form-group>
       <div class="botones__login">
-        <b-button type="submit" class="mb-3" variant="primary" @click="login"
-          >Iniciar sesión</b-button
-        >
-
-<<<<<<< HEAD
-        <!--Boton GOOGLE-->
-        <b-button class="mb-3" @click="logInGoogle" variant="success">
-          Continuar con Gmail
-        </b-button>
-=======
       <b-button type="submit" class="mb-3" variant="primary" @click="login">Iniciar sesión</b-button>
 
       <!--Boton GOOGLE-->
@@ -52,12 +42,6 @@
       <b-button class="mb-3" @click="redigirigir" variant="success">
         Regístrate
       </b-button>
->>>>>>> 39827d47828569da9d6fd3db36f20b837c4e830f
-
-        <!--Boton para registro -->
-        <b-button class="mb-3" @click="goRegistro" variant="success">
-          Regístrate
-        </b-button>
       </div>
     </div>
     <div class="container font__awesome">

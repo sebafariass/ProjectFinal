@@ -13,7 +13,7 @@
     
     <b-form-select v-model="selected2" >
       <b-form-select-option :value="null">Selecciona una edad</b-form-select-option>
-      <b-form-select-option v-for="(edad,j) in edades" :key="j" :value="edad.data.codigo">{{edad.data.rango}}</b-form-select-option>
+      <b-form-select-option v-for="(edad,j) in edades" :key="j" :value="edad.data.rango">{{edad.data.rango}}</b-form-select-option>
     </b-form-select>
 
        <div>
