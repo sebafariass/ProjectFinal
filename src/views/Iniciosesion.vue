@@ -52,8 +52,8 @@
           color="red accent-2"
           x-large
           class="py-2 ml-2"
-          @click="dialog = false"
-          to="/home"
+          @click="dialogo"
+         
         >
           <v-icon left>mdi-close</v-icon>
           Cerrar
@@ -74,7 +74,7 @@ export default {
   name: "Iniciosesion",
   data() {
     return {
-        dialog: false,
+     
         ingreso: false, 
       // objeto usuario
       usuario: {
@@ -87,9 +87,13 @@ export default {
   }, // ////// FINAL DEL DATA \\\\\\\\
   methods: {
     crear_user() {
-      this.dialog = false;
+   
       this.agregando_user(this.usuario);
       this.$router.push('login')
+    },
+    dialogo() {
+      
+       this.$router.push('login')
     },
     ...mapActions(["agregando_user"]),
 
