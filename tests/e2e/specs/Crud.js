@@ -1,8 +1,19 @@
 describe('Probando Input testint', () => {
 
+
+  it('Login Web Testing', () => {
+    cy.visit('/login')
+    cy.get('#input-1').type('proyecto@gmail.com')
+    cy.get('#input-2').type('123456')
+    cy.get('#botonSesion').click()
+  
+   
+    
+  }) 
+
   it('AgregaCrud', () => {
     cy.visit('/trueque')
-    
+
     cy.get('#inputImg').type('https://firebasestorage.googleapis.com/v0/b/proyectofinal-6fe4e.appspot.com/o/imagenes%2FIMG-20140422-WA0001.jpg?alt=media&token=04fe33ea-e449-4c3b-a37d-2f5e31b501e0')
     cy.get('#input_name').type('LUCIA')
     cy.get('#input_producto').type('Sonajeroaa')

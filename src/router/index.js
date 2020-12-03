@@ -62,7 +62,7 @@ const routes = [
       name: "Trueque",
       component: () =>
         import("../views/Trueque.vue"),
-   
+     
     },
     
   ];
