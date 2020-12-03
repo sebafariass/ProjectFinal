@@ -1,7 +1,7 @@
 <template>
  <div class="registro__pagina">
         <v-container> 
-            <v-card color="teal lighten-5" class="pa-5">
+            <v-card class="pa-5" style="opacity:0.5">
         <!--  /////// FORMULARIO \\\\\\\ -->
         <div class="mb-5">
           <v-card-title

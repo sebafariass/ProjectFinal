@@ -20,7 +20,7 @@
             <b-nav-item to="/home">Home</b-nav-item>
             <b-nav-item to="/registro">Registro de Mascotas</b-nav-item>
             <b-nav-item to="/muestra">MatchCan</b-nav-item>
-            <b-nav-item to="/iniciosesion">Registrar Usuario</b-nav-item>
+            <!--b-nav-item to="/iniciosesion">Registrar Usuario</b-nav-item-->
             <b-nav-item to="/mercado">Mercadito</b-nav-item>
               <b-nav-item to="/trueque">Sube tu Trueque</b-nav-item>
             <b-nav-item @click="logout">Logout</b-nav-item>
