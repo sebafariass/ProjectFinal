@@ -1,6 +1,6 @@
 <!-- Template -->
 <template>
-  <div>
+  <div class="mercado__pagina">
     <v-container class="banner_mercado p-5 mt-3">
     Sección para que los usuarios puedan compartir utensilios de sus mascotas para compartir 
     con los demas usuarios registrados
@@ -48,4 +48,13 @@ export default {
   color: #ffffff;
   text-align: left;
 }
+.mercado__pagina {
+  background: url("../assets/bg-mercadito.jpg") no-repeat center fixed;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 </style>

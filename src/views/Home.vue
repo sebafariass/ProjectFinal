@@ -5,11 +5,10 @@
   <div>
      <h2>Bienvenid@</h2>
     <h2>¿Qué buscas?</h2>
-    <b-form-select class="my-5" v-model="selected1">
-      <b-form-select-option class="select" :value="null" >Selecciona una raza</b-form-select-option>
-      <b-form-select-option class="select" v-for="(raza,i) in razas" :key="i" :value="raza.data.codigo">{{raza.data.nombre}}</b-form-select-option>
+    <b-form-select class="my-5" v-model="selected1" >
+      <b-form-select-option class="select"  :value="null" >Selecciona una raza</b-form-select-option>
+      <b-form-select-option class="select"  v-for="(raza,i) in razas" :key="i" :value="raza.data.codigo">{{raza.data.nombre}}</b-form-select-option>
     </b-form-select>
-    <div class="mt-3">Selected1: <strong>{{ selected1 }}</strong></div>
     
     <b-form-select v-model="selected2" >
       <b-form-select-option :value="null">Selecciona una edad</b-form-select-option>
@@ -38,7 +37,6 @@ import {mapState, mapGetters, mapActions} from "vuex";
 
   export default {
     data() {
-      
       return {
         selected1 : null,
         selected2 : null,
@@ -56,12 +54,13 @@ import {mapState, mapGetters, mapActions} from "vuex";
             codigo: ""
           }
         },
-         personaje: {
+      personaje: {
         data: {
           imgSrc : "",
+          city: ""
 
         }
-      }
+      },
       }  
       
     },
@@ -73,6 +72,15 @@ import {mapState, mapGetters, mapActions} from "vuex";
     computed: {
     ...mapState(['razas','edades']),
     ...mapState(["personas"]),
+      
+      /*filterProductsByCategory: function() {
+      console.log("psonas:"+ this.personas.sex)
+      return this.personas.filter(function(persona) {
+        console.log("persona: "+ persona.name);
+        return persona.sex == 'M';
+      });
+    } */
+
   },
    components: {
     Card,

@@ -65,11 +65,6 @@
             stream
           ></v-progress-linear>
         </div>
-        <br />
-        <h2 class="text-center">Mascotas Disponibles</h2>
-   
-
-
       </v-container>
     </div>
   </div>
@@ -184,7 +179,7 @@ export default {
   margin: 20px;
 }
 .registro__pagina {
-  background: url("../assets/bg-registro.jpg") no-repeat center fixed;
+  background: url("../assets/bg-registro1.jpg") no-repeat center fixed;
   height: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -192,10 +187,11 @@ export default {
   background-size: cover;
 }
 h2 {
-  color: white;
+  color: black;
+  text-align: center;
 }
 .datos__registro {
-  color: white;
   font-family: "Sansita Swashed", cursive;
 }
+
 </style>

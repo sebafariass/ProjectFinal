@@ -1,7 +1,7 @@
 <template>
- <div >
+ <div class="registro__pagina">
         <v-container> 
-            <v-card color="teal lighten-5" class="pa-5">
+            <v-card class="pa-5" style="opacity:0.5">
         <!--  /////// FORMULARIO \\\\\\\ -->
         <div class="mb-5">
           <v-card-title
@@ -111,3 +111,19 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+.registro__pagina {
+   background: url("../assets/bg-registro-dueño.jpg") no-repeat center fixed;
+    height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.v-application .teal.lighten-5 {
+  font-family: "Sansita Swashed", cursive;
+  color: white;
+}
+
+
+</style>
