@@ -55,6 +55,10 @@ export default {
   -o-background-size: cover;
   background-size: cover;
 }
+h1 {
+  font-family: "Sansita Swashed", cursive;
+  color: white;
+}
 
 </style>
 

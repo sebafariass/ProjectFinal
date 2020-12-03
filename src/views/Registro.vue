@@ -193,6 +193,7 @@ export default {
 }
 h2 {
   color: white;
+  text-align: center;
 }
 .datos__registro {
   color: white;
