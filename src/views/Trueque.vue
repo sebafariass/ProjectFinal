@@ -56,7 +56,7 @@
         <b-form-input id="editNameDog" v-model="tienda.data.nombre"> </b-form-input>
       </b-form-group>
 
-      <b-form-group  label="Producto para Trueque:" label-for="input-2">
+      <b-form-group id="input-group-2" label="Producto para Trueque:" label-for="input-2">
         <b-form-input v-model="tienda.data.producto"> </b-form-input>
       </b-form-group>
 
@@ -84,7 +84,7 @@
         <b-form-input v-model="tienda.data.wsapp"> </b-form-input>
       </b-form-group>
 
-      <b-button type="submit" color="sucess" @click="update">Aceptar cambios</b-button>
+      <b-button id="boton_name" type="submit" color="sucess" @click="update">Aceptar cambios</b-button>
     </b-modal>
     <hr />
 
