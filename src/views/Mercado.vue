@@ -1,34 +1,32 @@
 <!-- Template -->
 <template>
   <div class="mercado__pagina">
-    <v-container class="banner_mercado p-5 mt-3">
-    Sección para que los usuarios puedan compartir utensilios de sus mascotas para compartir 
-    con los demas usuarios registrados
-    </v-container>
-
-    <div class="container">
-      <v-container>
-        <v-row>
-          <v-col md="4" v-for="(tienda, i) in trueques" :key="i">
-            <Cardmercado :tienda="tienda" />
-          </v-col>
-        </v-row>
-      </v-container>
+    <div>
+      <h1>Espacio de intercambio</h1>
+      <h5>
+        Donde los usuarios pueden compartir e intercambiar elementos de sus
+        mascotas
+      </h5>
     </div>
+    <v-container>
+      <v-row>
+        <v-col md="4" v-for="(tienda, i) in trueques" :key="i">
+          <Cardmercado :tienda="tienda" />
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
 <!-- Script -->
 <script>
-
 import Cardmercado from "@/components/mostrarcard/Cardmercado.vue";
 import { mapState } from "vuex";
 export default {
-
   name: "Mercado",
-   data: {
-     Cardmercado : "",
-   },
+  data: {
+    Cardmercado: "",
+  },
   computed: {
     ...mapState(["trueques"]),
   },
@@ -39,15 +37,7 @@ export default {
 </script>
 
 <!-- Style -->
-<style >
-
-
-
-.banner_mercado {
-  background-color: #071631ec;
-  color: #ffffff;
-  text-align: left;
-}
+<style>
 .mercado__pagina {
   background: url("../assets/bg-mercadito.jpg") no-repeat center fixed;
   height: 100%;
@@ -56,5 +46,13 @@ export default {
   -o-background-size: cover;
   background-size: cover;
 }
-
+h1 {
+  color: white;
+  font-family: "Sansita Swashed", cursive;
+}
+h5 {
+  color: white;
+  font-family: "Sansita Swashed", cursive;
+  text-align: center;
+}
 </style>
