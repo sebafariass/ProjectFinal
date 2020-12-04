@@ -148,10 +148,10 @@
 import firebase from "firebase";
 import { mapState, mapGetters, mapActions } from "vuex";
 export default {
-  name: "Edit",
+
+  name: "Editable",
   data() {
     return {
-      idUpdating: "",
       img: "",
       nombre: "",
       producto: "",

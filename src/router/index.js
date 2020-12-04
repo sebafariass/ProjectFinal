@@ -8,6 +8,7 @@ const routes = [
     {
       path: "/",
       redirect: "/login",
+  
     },
     {
       path: "/home",
@@ -60,7 +61,12 @@ const routes = [
         import("../views/Trueque.vue"),
      
     },
-    
+    {
+      path: '*',
+      name: 'NotFound',
+      component: () =>
+        import(/* webpackChunkName: "NotFound" */ '../views/NotFound.vue'),
+    },
   ];
 
   const router = new VueRouter({
