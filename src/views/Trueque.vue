@@ -216,7 +216,7 @@ export default {
 <style>
 .btnLogout {
   color: #ffffff;
-  background-color: rgb(48, 151, 247);
+  /*background-color: rgb(48, 151, 247);*/
   border-style: none !important;
   border-radius: 5px;
   padding: 10px 20px;
