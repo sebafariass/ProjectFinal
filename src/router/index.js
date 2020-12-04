@@ -28,9 +28,7 @@ const routes = [
       name: "Registro",
       component: () =>
         import( "../views/Registro.vue"),
-        meta: {
-          login: true,
-        },
+      
     },
     {
       path: "/muestra",
@@ -46,9 +44,21 @@ const routes = [
       name: "Iniciosesion",
       component: () =>
         import("../views/Iniciosesion.vue"),
-        meta: {
-          login: true,
-        },
+       
+    },
+    {
+      path: "/mercado",
+      name: "Mercado",
+      component: () =>
+        import("../views/Mercado.vue"),
+       
+    },
+    {
+      path: "/trueque",
+      name: "Trueque",
+      component: () =>
+        import("../views/Trueque.vue"),
+     
     },
     
   ];

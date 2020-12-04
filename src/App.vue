@@ -28,10 +28,15 @@ export default {
     this.getDataRazas(),
     this.getDataEdades(),
     this.getDataPersonas()
+    this.getDataTrueques()
   },
 
   methods: {
-    ...mapActions(["getDataRazas","getDataEdades", "getDataPersonas"]),
+   
+     ...mapActions(["getDataRazas"]),
+      ...mapActions(["getDataEdades"]),
+       ...mapActions(["getDataPersonas"]),
+       ...mapActions(["getDataTrueques"]),
   },
 };
 </script>

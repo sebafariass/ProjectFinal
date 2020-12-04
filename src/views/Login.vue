@@ -30,19 +30,18 @@
         ></b-form-input>
       </b-form-group>
       <div class="botones__login">
-        <b-button type="submit" class="mb-3" variant="primary" @click="login"
-          >Iniciar sesión</b-button
-        >
+      <b-button id="botonSesion" type="submit" class="mb-3" variant="primary" @click="login">Iniciar sesión</b-button>
 
-        <!--Boton GOOGLE-->
-        <b-button class="mb-3" @click="logInGoogle" variant="success">
-          Continuar con Gmail
-        </b-button>
-
-        <!--Boton para registro -->
-        <b-button class="mb-3" @click="goRegistro" variant="success">
-          Regístrate
-        </b-button>
+      <!--Boton GOOGLE-->
+      <b-button class="mb-3" id="botonGoogle"  @click="logInGoogle" variant="success">
+        Continuar con Gmail
+        
+      </b-button>
+      <br>
+      <!--Boton para registro -->
+      <b-button id="redirigirBoton" class="mb-3" @click="redigirigir" variant="success">
+        Regístrate
+      </b-button>
       </div>
     </div>
     <div class="container font__awesome">
@@ -71,37 +70,15 @@ export default {
     };
   },
   methods: {
-    goRegistro() {
-      this.$router.replace("/registro")
-    },
+    
 
     login() {
-      const email = this.email;
-      const password = this.password;
-      firebase
-        .auth()
-        .signInWithEmailAndPassword(this.email, this.password)
-        .then((resultado) => {
-          this.$bvToast.toast("Bienvenido " + resultado.user.email, {
-            title: `Usuario autenticado`,
-            toaster: "b-toaster-top-center",
-            solid: true,
-            variant: "primary",
-            appendToast: true,
-          });
-          console.log(resultado);
-          router.push({ name: "Home" });
-        })
-        .catch((e) => {
-          this.$bvToast.toast(e.message, {
-            title: `Error`,
-            toaster: "b-toaster-top-center",
-            solid: true,
-            variant: "primary",
-            appendToast: true,
-          });
-          console.log();
-        });
+      const email = this.email
+      const password = this.password
+      firebase.auth().signInWithEmailAndPassword(email, password).then( (resultado) => {
+        console.log(resultado)
+        router.push({name:"Home"})
+      }).catch(e => console.log(e.message))
     },
 
     //GOOGLE
@@ -125,6 +102,10 @@ export default {
           console.error("Sign Out Error", e);
         });
     },
+
+    	redigirigir() {		
+				this.$router.push('iniciosesion')
+			},
   },
 };
 </script>

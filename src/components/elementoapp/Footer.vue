@@ -12,7 +12,7 @@
         <v-btn
           v-for="(icon,j) in icons"
           :key="j"
-          :href="j.link"
+          :href="icon.link"
           class="mx-4 white--text" icon>
           <v-icon size="24px">
             {{ icon.icono }}

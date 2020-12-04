@@ -1,7 +1,7 @@
 <template>
- <div >
+ <div class="registro__pagina">
         <v-container> 
-            <v-card color="teal lighten-5" class="pa-5">
+            <v-card class="pa-5" style="opacity:0.5">
         <!--  /////// FORMULARIO \\\\\\\ -->
         <div class="mb-5">
           <v-card-title
@@ -11,18 +11,19 @@
           </v-card-title>
         </div>
 
-        <v-text-field v-model="usuario.nombre" label="Nombre"></v-text-field>
+        <v-text-field id="nombre_usuario" v-model="usuario.nombre" label="Nombre"></v-text-field>
 
-        <v-text-field v-model="usuario.email" label="E-mail"></v-text-field>
+        <v-text-field id="email_usuario" v-model="usuario.email" label="E-mail"></v-text-field>
 
         <v-text-field
           v-model="usuario.direccion"
           label="Dirección"
+          id="address_usuario"
         ></v-text-field>
 
        <v-text-field
           v-model="usuario.password"
-      
+          id="add_Password"
           :type="ingreso ? 'text' : 'password'"
           label="Escribe tu contraseña"
           @click:append="ingreso = !ingreso"
@@ -36,6 +37,7 @@
           x-large
           class="py-2 my-2"
           @click="crear_user"
+          id="addUsuario"
           
         >
          <v-icon left >mdi-heart</v-icon>
@@ -52,8 +54,9 @@
           color="red accent-2"
           x-large
           class="py-2 ml-2"
-          @click="dialog = false"
-          to="/home"
+          @click="dialogo"
+          id="closeUsuario"
+         
         >
           <v-icon left>mdi-close</v-icon>
           Cerrar
@@ -74,7 +77,7 @@ export default {
   name: "Iniciosesion",
   data() {
     return {
-        dialog: false,
+     
         ingreso: false, 
       // objeto usuario
       usuario: {
@@ -87,8 +90,13 @@ export default {
   }, // ////// FINAL DEL DATA \\\\\\\\
   methods: {
     crear_user() {
-      this.dialog = false;
+   
       this.agregando_user(this.usuario);
+      this.$router.push('login')
+    },
+    dialogo() {
+      
+       this.$router.push('login')
     },
     ...mapActions(["agregando_user"]),
 
@@ -103,3 +111,19 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+.registro__pagina {
+   background: url("../assets/bg-registro-dueño.jpg") no-repeat center fixed;
+    height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.v-application .teal.lighten-5 {
+  font-family: "Sansita Swashed", cursive;
+  color: white;
+}
+
+
+</style>

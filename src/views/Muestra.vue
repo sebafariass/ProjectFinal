@@ -1,6 +1,6 @@
 <!-- Template -->
 <template>
-  <div>
+  <div class="contacto__pagina">
     <div>
       <h1>Contacto Mascotas</h1>
     </div>
@@ -14,6 +14,7 @@
           </v-col>
         </v-row>
       </v-container>
+      
     </div>
   </div>
 </template>
@@ -45,4 +46,19 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+.contacto__pagina {
+  background: url("../assets/bg-contacto1.jpg") no-repeat center fixed;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+h1 {
+  font-family: "Sansita Swashed", cursive;
+  color: white;
+}
+
+</style>
 
