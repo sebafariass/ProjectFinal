@@ -7,7 +7,7 @@
     </v-card-text>
 
     <v-card-actions >
-      <v-btn  @click="reveal = true">
+      <v-btn id="btnAceptando" @click="reveal = true">
         Leer más
       </v-btn>
     </v-card-actions>
@@ -37,7 +37,7 @@
         </v-card-text>
 
         <v-card-actions class="mb-3">
-          <v-btn  @click="reveal = false">
+          <v-btn id="cerrarMercado" @click="reveal = false">
             Cerrar
           </v-btn>
         </v-card-actions>

@@ -23,12 +23,12 @@
             <div>
               <h5>Datos Mascota</h5>
 
-              <div><b>Nombre:</b> {{ personaje.data.name }}</div>
-              <div><b>Edad:</b> {{ personaje.data.edad }}</div>
-              <div><b>Raza:</b> {{ personaje.data.race }}</div>
-              <div><b>Sexo:</b> {{ personaje.data.sex }}</div>
-              <div><b>Ciudad:</b> {{ personaje.data.city }}</div>
-              <div><b>Info:</b> {{ personaje.data.info }}</div>
+              <div id="nameMascota"><b>Nombre:</b> {{ personaje.data.name }}</div>
+              <div id="edadMascota" ><b>Edad:</b> {{ personaje.data.edad }}</div>
+              <div id="razaMascota"><b>Raza:</b> {{ personaje.data.race }}</div>
+              <div id="sexoMascota"><b>Sexo:</b> {{ personaje.data.sex }}</div>
+              <div id="ciudadMascota"><b>Ciudad:</b> {{ personaje.data.city }}</div>
+              <div id="infoMascota"><b>Info:</b> {{ personaje.data.info }}</div>
             </div>
           </v-card-text>
 

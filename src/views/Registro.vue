@@ -10,13 +10,14 @@
           <v-text-field class="datos__registro" v-model="nombre" label="Nombre"></v-text-field>
           <!-- Select Edad -->
           <b-form-select v-model="selectedEdad">
-            <b-form-select-option :value="0"
+            <b-form-select-option  class="selectEdad" :value="0"
               >Selecciona una edad</b-form-select-option
             >
             <b-form-select-option
               v-for="(edad, j) in edades"
               :key="j"
               :value="edad.data.rango"
+              id="edadSelection"
               >{{ edad.data.rango }}</b-form-select-option
             >
           </b-form-select>
@@ -30,12 +31,13 @@
               v-for="(raza, i) in razas"
               :key="i"
               :value="raza.data.nombre"
+              id="razaSelection"
               >{{ raza.data.nombre }}</b-form-select-option
             >
           </b-form-select>
           <!-- Select Sexo -->
           <b-form-select class="my-5 datos__registro " v-model="selectedSexo">
-            <b-form-select-option class="select" :value="0"
+            <b-form-select-option id="sexoSelection" class="select" :value="0"
               >Selecciona Sexo</b-form-select-option
             >
             <b-form-select-option class="select datos__registro " value="Macho"
@@ -46,16 +48,17 @@
             >
           </b-form-select>
 
-          <v-text-field v-model="ciudad" label="Ciudad" class="datos__registro"></v-text-field>
-          <v-text-field v-model="text" label="Información Extra" class="datos__registro"></v-text-field>
+          <v-text-field v-model="ciudad" id="ciudadSelection" label="Ciudad" class="datos__registro"></v-text-field>
+          <v-text-field v-model="text" id="infoSelection" label="Información Extra" class="datos__registro"></v-text-field>
           <v-file-input
             @change="previewImage"
             accept="image/*"
             label="Sube Archivo"
+            
           ></v-file-input>
         </v-main>
 
-        <b-button @click="upload" variant="primary"> Subir imagen </b-button>
+        <b-button id="inputUpload" @click="upload" variant="primary"> Subir imagen </b-button>
 
         <div v-show="loading">
           <h3>Registrando Mascotas</h3>

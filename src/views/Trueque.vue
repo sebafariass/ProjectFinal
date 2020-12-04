@@ -22,7 +22,7 @@
       </thead>
 
       <tbody>
-        <tr id="datosPerros" v-for="(tienda, i) in trueques" :key="i">
+        <tr id="datosTrueques" v-for="(tienda, i) in trueques" :key="i">
           <td><v-img class="imgDog" :src="tienda.data.img"></v-img></td>
           <td>{{ tienda.data.nombre }}</td>
           <td>{{ tienda.data.producto }}</td>
@@ -32,13 +32,14 @@
           <td>{{ tienda.data.ciudad }}</td> 
           <td>{{ tienda.data.contacto }}</td>
           <td>{{ tienda.data.wsapp }}</td>          
-          <td >
+          
+          <td>
             <!-- Botón Editar -->
-            <button v-b-modal.modal-1 @click="editar(tienda.id)" class="btn btnEdit" id="btnEditarPerrito">
+            <button v-b-modal.modal-1 @click="editar(tienda.id)" class="btn btnEdit" id="btnEditarTrueque">
               Editar
             </button>
             <!-- Botón Eliminar -->
-            <button @click="eliminar(tienda.id)" class="btn btnDelete" id="btnEliminarPerrito">
+            <button @click="eliminar(tienda.id)" class="btn btnDelete" id="btnEliminarTrueque">
               Eliminar
             </button>
           </td>
@@ -48,12 +49,12 @@
 
 
 <b-modal id="modal-1" title="BootstrapVue" class="EditForm">
-      <b-form-group id="input-group-1" label="Agrega la URL de la magen:" label-for="input-1">
-        <b-form-input v-model="tienda.data.img"> </b-form-input>
+      <b-form-group  label="Agrega la URL de la magen:" label-for="input-1">
+        <b-form-input  v-model="tienda.data.img"> </b-form-input>
       </b-form-group>
 
       <b-form-group id="input-group-1"  label="Nombre:" label-for="input-1">
-        <b-form-input id="editNameDog" v-model="tienda.data.nombre"> </b-form-input>
+        <b-form-input id="editnameModal"  v-model="tienda.data.nombre"> </b-form-input>
       </b-form-group>
 
       <b-form-group id="input-group-2" label="Producto para Trueque:" label-for="input-2">
@@ -84,7 +85,7 @@
         <b-form-input v-model="tienda.data.wsapp"> </b-form-input>
       </b-form-group>
 
-      <b-button id="boton_name" type="submit" color="sucess" @click="update">Aceptar cambios</b-button>
+      <b-button class="cambiosBtn" type="submit" color="sucess" @click="update">Aceptar cambios</b-button>
     </b-modal>
     <hr />
 
@@ -93,44 +94,44 @@
     <h4 class="text-center">Agrega tu producto para el Mercado</h4>
     <div class="w-50 m-auto formAdd">
       <b-form-group  id="input-group-1" label=" Agrega la URL de la Imagen:" class="mt-5" label-for="input-1">
-        <b-form-input  v-model="img"> </b-form-input>
+        <b-form-input id="inputImg" v-model="img"> </b-form-input>
       </b-form-group>
 
       <b-form-group id="input-group-1"  label="Nombre:" label-for="input-1">
-        <b-form-input  v-model="nombre"> </b-form-input>
+        <b-form-input id="input_name" v-model="nombre"> </b-form-input>
       </b-form-group>
 
       <b-form-group  id="input-group-2" label="Producto:" label-for="input-2">
-        <b-form-input  v-model="producto"> </b-form-input>
+        <b-form-input id="input_producto" v-model="producto"> </b-form-input>
       </b-form-group>
 
       <b-form-group id="input-group-2" label="Tiempo de Uso:" label-for="input-2">
-        <b-form-input  v-model="tiempo"> </b-form-input>
+        <b-form-input  id="input_tiempo" v-model="tiempo"> </b-form-input>
       </b-form-group>
 
       <b-form-group id="input-group-2" label="Causa:" label-for="input-2">
-        <b-form-input  v-model="causa"> </b-form-input>
+        <b-form-input id="input_causa" v-model="causa"> </b-form-input>
       </b-form-group>
 
        <b-form-group id="input-group-2" label="Intercambio:" label-for="input-2">
-        <b-form-input  v-model="intercambio"> </b-form-input>
+        <b-form-input id="input_intercambio" v-model="intercambio"> </b-form-input>
       </b-form-group>
 
        <b-form-group id="input-group-2" label="Ciudad en la que vives:" label-for="input-2">
-        <b-form-input  v-model="ciudad"> </b-form-input>
+        <b-form-input id="input_ciudad" v-model="ciudad"> </b-form-input>
       </b-form-group>
 
       <b-form-group id="input-group-2" label="Email de Contacto:" label-for="input-2">
-        <b-form-input  v-model="contacto"> </b-form-input>
+        <b-form-input id="input_email" v-model="contacto"> </b-form-input>
       </b-form-group>
 
       <b-form-group id="input-group-2" label="Wsapp:" label-for="input-2">
-        <b-form-input v-model="wsapp"> </b-form-input>
+        <b-form-input id="input_wsp" v-model="wsapp"> </b-form-input>
       </b-form-group>
 
 
         <!--//////BOTON AGREGAR\\\\\ -->
-      <b-button type="submit" class="btnAdd" @click="agregar">Agregar</b-button>
+      <b-button id="btnClick" type="submit"  @click="agregar">Agregar</b-button>
 
 
    
