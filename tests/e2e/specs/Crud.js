@@ -14,7 +14,7 @@ describe('Probando Input testint', () => {
   it('AgregaCrud', () => {
     cy.visit('/trueque')
 
-    cy.get('#inputImg').type('https://firebasestorage.googleapis.com/v0/b/proyectofinal-6fe4e.appspot.com/o/imagenes%2FIMG-20140422-WA0001.jpg?alt=media&token=04fe33ea-e449-4c3b-a37d-2f5e31b501e0')
+    cy.get('#inputImg').type('https://www.ecestaticos.com/image/clipping/79776773aab795837282c7d4947abaf7/por-que-nos-parece-que-los-perros-sonrien-una-historia-de-30-000-anos.jpg')
     cy.get('#input_name').type('LUCIA')
     cy.get('#input_producto').type('Sonajeroaa')
     cy.get('#input_tiempo').type('3 año de uso.')
